@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alireza Bafti — Flood Modeling & GeoAI</title>
+  <meta name="description" content="Flood modeling, GeoAI, and remote sensing. FEMA/NSF projects, publications, skills, academic experience, and education." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Hover edge to reveal nav when hidden -->
+  <div id="hoverEdge" aria-hidden="true"></div>
+
+  <!-- Top Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-text">Alireza Bafti</span>
+      </a>
+
+      <nav class="nav-links" role="navigation" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+
+        <!-- Projects mega menu -->
+        <div class="nav-item has-mega" id="navProjects">
+          <button class="nav-link" aria-expanded="false">Projects</button>
+          <div class="mega" role="menu" aria-label="Projects">
+            <div class="mega-grid">
+              <div class="mega-col">
+                <p class="mega-kicker">Explore</p>
+                <h3 class="mega-title">Selected Projects</h3>
+                <a href="#proj-fema" class="mega-link">Compound Flood Modeling — FEMA/NSF</a>
+                <a href="#proj-risk" class="mega-link">Flood-Risk Monitoring (IN-CORE · SWMM · BRAILS · ArcPy)</a>
+                <a href="#proj-twin" class="mega-link">Urban Flood Digital Twin</a>
+                <a href="#proj-et" class="mega-link">ET Estimation — Attention U-Net</a>
+                <a href="#proj-coastal" class="mega-link">Coastal Surge Mapper</a>
+              </div>
+              <div class="mega-col">
+                <p class="mega-kicker">Focus Areas</p>
+                <ul class="mega-list">
+                  <li>Compound coastal & pluvial flooding</li>
+                  <li>GeoAI + physics-based modeling</li>
+                  <li>Risk analytics & exposure mapping</li>
+                </ul>
+              </div>
+              <div class="mega-col">
+                <p class="mega-kicker">Stack</p>
+                <ul class="mega-list">
+                  <li>IN-CORE · SWMM · HEC-RAS</li>
+                  <li>BRAILS · ArcPy · GIS</li>
+                  <li>Python · TensorFlow · scikit-learn</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Publications mega menu -->
+        <div class="nav-item has-mega" id="navPubs">
+          <button class="nav-link" aria-expanded="false">Publications</button>
+          <div class="mega" role="menu" aria-label="Publications">
+            <div class="mega-grid">
+              <div class="mega-col">
+                <p class="mega-kicker">Journal Articles</p>
+                <a href="#publications" class="mega-link">Journal of Hydrology (2021)</a>
+                <a href="#publications" class="mega-link">Water (2021)</a>
+                <a href="#publications" class="mega-link">Atmospheric Research (2024)</a>
+                <a href="#publications" class="mega-link">JoH: Regional Studies (2025)</a>
+              </div>
+              <div class="mega-col">
+                <p class="mega-kicker">Conferences</p>
+                <ul class="mega-list">
+                  <li>AGU 2023</li>
+                  <li>ASA/CSSA/SSSA 2023 (x2)</li>
+                </ul>
+              </div>
+              <div class="mega-col">
+                <p class="mega-kicker">Get the PDF</p>
+                <p class="mega-note">Links to DOIs and preprints are listed on the Publications section.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a class="btn ghost" href="assets/Alireza-Ghaderi-Bafti-CV.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+
+      <button class="menu btn ghost" id="openMenu" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Backdrop that blurs/dims the page when mega is open -->
+  <div id="navBackdrop" class="nav-backdrop" aria-hidden="true"></div>
+
+  <!-- Mobile sheet -->
+  <div id="sheet" class="hidden" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet-panel">
+      <div class="row sheet-head">
+        <strong id="sheetTitle">Menu</strong>
+        <button class="btn ghost" id="closeMenu" aria-label="Close menu">✕</button>
+      </div>
+      <div class="sheet-links">
+        <a href="#about" class="sheet-link">About</a>
+        <a href="#skills" class="sheet-link">Skills</a>
+        <a href="#projects" class="sheet-link">Projects</a>
+        <a href="#publications" class="sheet-link">Publications</a>
+        <a href="#experience" class="sheet-link">Experience</a>
+        <a href="#education" class="sheet-link">Education</a>
+        <a href="#contact" class="sheet-link">Contact</a>
+        <a href="assets/Alireza-Ghaderi-Bafti-CV.pdf" target="_blank" rel="noopener" class="sheet-link">Resume (PDF)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <main id="top">
+    <section class="container hero reveal in-on-load">
+      <div class="hero-grid">
+        <div>
+          <span class="tag">👋 Hello</span>
+          <h1 class="headline load-rise">I'm
+            <span class="name-gradient">Alireza Bafti</span> — Flood Modeling • GeoAI • Remote Sensing
+          </h1>
+          <p class="sub load-rise">
+            Graduate Student in <strong>Ocean Engineering (URI)</strong>. I integrate
+            <strong>IN-CORE</strong>, <strong>SWMM</strong>, <strong>BRAILS</strong>, <strong>ArcPy</strong>, and deep learning to model
+            <strong>compound coastal/pluvial flooding</strong> and monitor flood risk.
+          </p>
+          <div class="row" style="margin-top:18px">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <figure class="hero-card">
+          <img class="hero-photo" src="/photo_2025-08-13_04-03-16.jpg" alt="Coastal flood modeling visualization" />
+          <figcaption class="muted" style="margin-top:10px">Hover the image for a subtle zoom.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
+      <div class="container">
+        <h2 class="section-title load-rise"><span></span> About</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3>Bio</h3>
+            <p>Researcher and engineer focused on <strong>flood modeling</strong>, <strong>GeoAI</strong>, and <strong>remote sensing</strong>. I build data-driven & physics-based tools for resilience planning and risk reduction.</p>
+            <ul>
+              <li>🧠 Interests: Compound flooding, drainage networks, risk analytics</li>
+              <li>🛠 Tools: IN-CORE, SWMM, BRAILS, ArcPy, HEC-RAS</li>
+              <li>📍 Rhode Island, USA</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Academic Experience</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <strong>Graduate Student, Ocean Engineering</strong> — University of Rhode Island (Jan 2025–Sep 2026)
+                <div class="muted">FEMA/NSF: compound flooding & flood-risk monitoring (IN-CORE · SWMM · BRAILS · ArcPy).</div>
+              </div>
+              <div class="timeline-item">
+                <strong>Research Assistant</strong> — University of Florida (Jan 2023–Aug 2024)
+                <div class="muted">ET & soil moisture with DL/RS; ArcGIS; SWMM/HEC-RAS workflows.</div>
+              </div>
+              <div class="timeline-item">
+                <strong>Visiting Researcher</strong> — Lund University (Oct 2021–Dec 2021)
+                <div class="muted">Hydrology & remote sensing collaboration (Erasmus+ ICM).</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="reveal">
+      <div class="container">
+        <h2 class="section-title load-rise"><span></span> Skills</h2>
+        <div class="row">
+          <span class="chip">Python</span>
+          <span class="chip">ArcPy</span>
+          <span class="chip">TensorFlow</span>
+          <span class="chip">scikit-learn</span>
+          <span class="chip">LSTM / U-Net / Attention</span>
+          <span class="chip">SWMM</span>
+          <span class="chip">HEC-RAS</span>
+          <span class="chip">HEC-HMS</span>
+          <span class="chip">IN-CORE</span>
+          <span class="chip">BRAILS</span>
+          <span class="chip">GIS / Remote Sensing</span>
+          <span class="chip">PostGIS</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Airflow</span>
+          <span class="chip">AWS/GCP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="reveal">
+      <div class="container">
+        <h2 class="section-title load-rise"><span></span> Projects</h2>
+
+        <div class="cards-wrap">
+          <button class="cards-arrow left" id="cardsPrev" aria-label="Previous">‹</button>
+
+          <div class="cards-row" id="cardsRow">
+            <!-- Each card carries data-* for the modal -->
+            <a class="promo-card"
+               id="proj-fema" href="#proj-fema"
+               data-title="Compound Flood Modeling"
+               data-sub="FEMA & NSF — Coastal + pluvial scenarios"
+               data-tech="Python · SWMM · HEC-RAS · GIS"
+               data-img="assets/projects/compound_flood.jpg"
+               data-desc="Probabilistic compound flooding across coastal & urban catchments. Scenario generation, surge/tide + precipitation coupling, and street-level flow routing."
+               data-bullets="Scenario synthesis;Coupling surge/tide + rainfall;Uncertainty & exceedance maps">
+              <div class="promo-media"><img src="assets/projects/compound_flood.jpg" alt="Compound flooding visualization" /></div>
+              <div class="promo-body">
+                <p class="promo-kicker">Compound</p>
+                <h3>Compound Flood Modeling</h3>
+                <p class="promo-sub">FEMA & NSF — Coastal + pluvial scenarios</p>
+                <p class="promo-foot">Python · SWMM · HEC-RAS · GIS</p>
+              </div>
+              <button class="card-plus" type="button" aria-label="Open details">+</button>
+            </a>
+
+            <a class="promo-card"
+               id="proj-risk" href="#proj-risk"
+               data-title="Flood-Risk Monitoring"
+               data-sub="IN-CORE · SWMM · BRAILS · ArcPy"
+               data-tech="GeoAI · Automation · Building inventories"
+               data-img="assets/projects/risk_monitor.jpg"
+               data-desc="Continuous risk analytics pipeline using IN-CORE fragilities, building attributes from BRAILS, and hydrodynamic outputs to produce exposure time series."
+               data-bullets="Automated data pulls;IN-CORE fragilities;Operational dashboard">
+              <div class="promo-media"><img src="assets/projects/risk_monitor.jpg" alt="Risk monitoring dashboard" /></div>
+              <div class="promo-body">
+                <p class="promo-kicker">Risk</p>
+                <h3>Flood-Risk Monitoring</h3>
+                <p class="promo-sub">IN-CORE · SWMM · BRAILS · ArcPy</p>
+                <p class="promo-foot">GeoAI · Automation · Building inventories</p>
+              </div>
+              <button class="card-plus" type="button" aria-label="Open details">+</button>
+            </a>
+
+            <a class="promo-card"
+               id="proj-twin" href="#proj-twin"
+               data-title="Urban Flood Digital Twin"
+               data-sub="Neighborhood forecasts with uncertainty"
+               data-tech="LSTM · FastAPI · Tiled maps"
+               data-img="assets/projects/digital_twin.jpg"
+               data-desc="Real-time twin that blends SWMM states with LSTM nowcasts; serves tiles/rasters via FastAPI for dashboards and emergency routing."
+               data-bullets="State fusion (SWMM + LSTM);FastAPI tile server;Uncertainty bands">
+              <div class="promo-media"><img src="assets/projects/digital_twin.jpg" alt="Urban flood digital twin" /></div>
+              <div class="promo-body">
+                <p class="promo-kicker">Twin</p>
+                <h3>Urban Flood Digital Twin</h3>
+                <p class="promo-sub">Neighborhood forecasts with uncertainty</p>
+                <p class="promo-foot">LSTM · FastAPI · Tiled maps</p>
+              </div>
+              <button class="card-plus" type="button" aria-label="Open details">+</button>
+            </a>
+
+            <a class="promo-card"
+               id="proj-et" href="#proj-et"
+               data-title="ET Estimation — Attention U-Net"
+               data-sub="Deep learning + metaheuristics"
+               data-tech="TensorFlow · Remote sensing"
+               data-img="assets/projects/et_unet.jpg"
+               data-desc="Attention U-Net trained on flux towers & satellite inputs; evolutionary search for hyper-parameters; uncertainty via ensembling."
+               data-bullets="Attention U-Net;Flux tower targets;Ensembled uncertainty">
+              <div class="promo-media"><img src="assets/projects/et_unet.jpg" alt="ET estimation with Attention U-Net" /></div>
+              <div class="promo-body">
+                <p class="promo-kicker">DL</p>
+                <h3>ET Estimation — Attention U-Net</h3>
+                <p class="promo-sub">Deep learning + metaheuristics</p>
+                <p class="promo-foot">TensorFlow · Remote sensing</p>
+              </div>
+              <button class="card-plus" type="button" aria-label="Open details">+</button>
+            </a>
+
+            <a class="promo-card"
+               id="proj-coastal" href="#proj-coastal"
+               data-title="Coastal Surge Mapper"
+               data-sub="Terrain-aware routing & analysis"
+               data-tech="HEC-RAS · SWMM · GDAL"
+               data-img="assets/projects/coastal_mapper.jpg"
+               data-desc="Surge/tide synthesizer with DEM conditioning and path-of-least-resistance routing to identify hot spots and critical infrastructure."
+               data-bullets="DEM conditioning;Routing by least resistance;Critical asset analysis">
+              <div class="promo-media"><img src="assets/projects/coastal_mapper.jpg" alt="Coastal surge mapping" /></div>
+              <div class="promo-body">
+                <p class="promo-kicker">Coastal</p>
+                <h3>Coastal Surge Mapper</h3>
+                <p class="promo-sub">Terrain-aware routing & analysis</p>
+                <p class="promo-foot">HEC-RAS · SWMM · GDAL</p>
+              </div>
+              <button class="card-plus" type="button" aria-label="Open details">+</button>
+            </a>
+          </div>
+
+          <button class="cards-arrow right" id="cardsNext" aria-label="Next">›</button>
+        </div>
+
+        <div class="cards-dots" id="cardsDots" aria-label="Projects carousel pagination"></div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="reveal">
+      <div class="container">
+        <h2 class="section-title load-rise"><span></span> Publications</h2>
+        <div class="grid">
+          <div class="card" id="pub1">
+            <h3>Journal Articles</h3>
+            <ol class="pub-list">
+              <li>
+                Alizadeh, B., <strong>Bafti, A. G.</strong>, et al. (2021). Attention-based LSTM + BO for streamflow prediction.
+                <em>Journal of Hydrology</em>, 601, 126526.
+                <a href="https://doi.org/10.1016/J.JHYDROL.2021.126526" target="_blank" rel="noopener">DOI</a>
+              </li>
+              <li>
+                Doulabian, S., Tousi, E. G., Aghlmand, R., Alizadeh, B., <strong>Bafti, A. G.</strong> (2021).
+                Integrating SWAT with multi-criteria decision analysis for rainwater.
+                <em>Water</em>.
+              </li>
+              <li>
+                <strong>Bafti, A. G.</strong>, Ahmadi, A., Abbasi, A., Kamangir, H., Jamali, S., Hashemi, H. (2024).
+                Automated actual ET estimation: Attention U-Net + metaheuristics.
+                <em>Atmospheric Research</em>, 297, 107107.
+                <a href="https://doi.org/10.1016/j.atmosres.2023.107107" target="_blank" rel="noopener">DOI</a>
+              </li>
+              <li>
+                Ahmadi, A., Daccache, A., He, M., Namadi, P., <strong>Bafti, A. G.</strong>, et al. (2025).
+                Deep global learning for California reference ET.
+                <em>Journal of Hydrology: Regional Studies</em>, 59, 102339.
+                <a href="https://doi.org/10.1016/j.ejrh.2025.102339" target="_blank" rel="noopener">DOI</a>
+              </li>
+            </ol>
+          </div>
+          <div class="card" id="pub2">
+            <h3>Conferences</h3>
+            <ul class="pub-list">
+              <li>AGU 2023 — High-resolution profile soil moisture via data fusion + DL.</li>
+              <li>ASA/CSSA/SSSA 2023 — Microwave radiometry (C/L-band) for soil moisture (ML).</li>
+              <li>ASA/CSSA/SSSA 2023 — Root-zone soil moisture with L-band radiometer (hybrid modeling).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="reveal">
+      <div class="container">
+        <h2 class="section-title load-rise"><span></span> Experience</h2>
+        <div class="card">
+          <div class="timeline">
+            <div class="timeline-item">
+              <strong>Graduate Student, Ocean Engineering</strong> — University of Rhode Island (Jan 2025–Sep 2026)
+              <div class="muted">Compound flooding & risk monitoring (IN-CORE · SWMM · BRAILS · ArcPy).</div>
+            </div>
+            <div class="timeline-item">
+              <strong>Research Assistant</strong> — University of Florida (Jan 2023–Aug 2024)
+              <div class="muted">ET/soil-moisture DL & RS; hydrologic/hydraulic modeling.</div>
+            </div>
+            <div class="timeline-item">
+              <strong>Visiting Researcher</strong> — Lund University (Oct 2021–Dec 2021)
+              <div class="muted">Hydrology & remote sensing collaboration (Erasmus+ ICM).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="reveal">
+      <div class="container">
+        <h2 class="section-title load-rise"><span></span> Education</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Ph.D. (in progress), Ocean Engineering — University of Rhode Island</h3>
+            <p class="muted">Jan 2025 – Sep 2026 (expected)</p>
+          </div>
+          <div class="card">
+            <h3>M.S., Soil & Water Sciences — University of Florida</h3>
+            <p class="muted">Jan 2023 – Aug 2024</p>
+          </div>
+          <div class="card">
+            <h3>M.S., Civil Engineering (Water) — Ferdowsi University of Mashhad</h3>
+            <p class="muted">2019 – 2022</p>
+          </div>
+          <div class="card">
+            <h3>B.S., Civil Engineering — Ferdowsi University of Mashhad</h3>
+            <p class="muted">2011 – 2015</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+<section id="contact" class="reveal">
+  <div class="container">
+    <h2 class="section-title load-rise"><span></span> Contact</h2>
+    <div class="grid cols-2">
+      <form class="card" action="mailto:a.ghaderibafti@ufl.edu" method="post" enctype="text/plain" onsubmit="notify(event)">
+        <h3>Send a message</h3>
+        <label>Name<br/>
+          <input required name="name" placeholder="Your name" class="field" />
+        </label>
+        <br/>
+        <label>Email<br/>
+          <input required type="email" name="email" placeholder="you@example.com" class="field" />
+        </label>
+        <br/>
+        <label>Message<br/>
+          <textarea required name="message" rows="5" placeholder="Hi! I'd like to talk about…" class="field"></textarea>
+        </label>
+        <br/>
+        <button class="btn" type="submit">Send</button>
+      </form>
+
+      <div class="card">
+        <h3>Elsewhere</h3>
+        <ul>
+          <li>GitHub: <a href="https://github.com/username" target="_blank" rel="noopener">@username</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/username" target="_blank" rel="noopener">/in/username</a></li>
+          <li>Google Scholar: <a href="#" target="_blank" rel="noopener">Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row" style="justify-content:space-between; align-items:center">
+        <div>© <span id="year"></span> Alireza Bafti. All rights reserved.</div>
+        <div class="muted">Built with HTML/CSS/JS. <a href="#top">Back to top ↑</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT MODAL (Apple-style overlay) -->
+  <div id="projectModal" class="modal" aria-hidden="true" aria-modal="true" role="dialog">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel" role="document" tabindex="-1">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-grid">
+        <figure class="modal-media"><img id="modalImg" alt="" /></figure>
+        <div class="modal-body">
+          <p class="modal-kicker" id="modalSub"></p>
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
+          <ul id="modalBullets" class="modal-bullets"></ul>
+          <p class="modal-tech" id="modalTech"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  /* Smooth anchor scroll (ignore project-card anchors—they open modal) */
+  document.addEventListener('click', (e)=>{
+    const a = e.target.closest('a[href^="#"]');
+    if(!a) return;
+    if(a.closest('.promo-card')){ e.preventDefault(); return; }
+    const el = document.querySelector(a.getAttribute('href'));
+    if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+  });
+
+  /* Mobile sheet */
+  const sheet = document.getElementById('sheet');
+  document.getElementById('openMenu').addEventListener('click', ()=> sheet.classList.remove('hidden'));
+  document.getElementById('closeMenu').addEventListener('click', ()=> sheet.classList.add('hidden'));
+  sheet.addEventListener('click', (e)=>{ if(e.target===sheet) sheet.classList.add('hidden'); });
+  document.querySelectorAll('.sheet-link').forEach(a=> a.addEventListener('click', ()=> sheet.classList.add('hidden')));
+
+  function notify(){ alert('Your email app will open. If nothing happens, copy the email address and send manually.'); }
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* Hide header on scroll down; show on scroll up; reveal on hovering top edge */
+  const header = document.getElementById('siteHeader');
+  const hoverEdge = document.getElementById('hoverEdge');
+  let lastY = window.scrollY;
+  function onScroll(){
+    const y = window.scrollY;
+    const goingDown = y > lastY && y > 80;
+    header.classList.toggle('nav--hidden', goingDown);
+    lastY = y;
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  hoverEdge.addEventListener('mouseenter', ()=> header.classList.remove('nav--hidden'));
+
+  /* Mega menus + blurred backdrop (Apple-style) */
+  const backdrop = document.getElementById('navBackdrop');
+  const headerEl = document.querySelector('.site-header');
+  const navLinks = document.querySelector('.nav-links');
+  const megaItems = document.querySelectorAll('.nav-item.has-mega');
+  const megaPanels = document.querySelectorAll('.mega');
+
+  // Inert toggling (prevents clicking the page while menu open)
+  const pageMain   = document.querySelector('main');
+  const pageFooter = document.querySelector('.site-footer');
+  function setInert(v){
+    if(!('inert' in HTMLElement.prototype)) return; // older browsers harmlessly skip
+    pageMain.inert = v; pageFooter.inert = v;
+  }
+
+  function closeAll(){
+    megaItems.forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('button.nav-link').setAttribute('aria-expanded','false');
+    });
+    backdrop.classList.remove('active');
+    document.documentElement.classList.remove('nav-open'); // removes filter fallback
+    setInert(false);
+  }
+  function openItem(item){
+    megaItems.forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('button.nav-link').setAttribute('aria-expanded','false');
+    });
+    item.classList.add('open');
+    item.querySelector('button.nav-link').setAttribute('aria-expanded','true');
+    backdrop.classList.add('active');
+    document.documentElement.classList.add('nav-open');   // enables blur fallback for all browsers
+    setInert(true);
+  }
+
+  // Open on hover/focus; switch instantly between the 2 mega menus
+  megaItems.forEach(item => {
+    const btn = item.querySelector('button.nav-link');
+    item.addEventListener('mouseenter', () => openItem(item));
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      item.classList.contains('open') ? closeAll() : openItem(item);
+    });
+  });
+
+  // Close logic: leaving header AND the mega panel closes; hovering other nav links closes
+  let overHeader=false, overMega=false;
+  headerEl.addEventListener('mouseenter', ()=> overHeader=true);
+  headerEl.addEventListener('mouseleave', ()=>{
+    overHeader=false; setTimeout(()=>{ if(!overHeader && !overMega) closeAll(); }, 40);
+  });
+  megaPanels.forEach(p=>{
+    p.addEventListener('mouseenter', ()=> overMega=true);
+    p.addEventListener('mouseleave', ()=>{
+      overMega=false; setTimeout(()=>{ if(!overHeader && !overMega) closeAll(); }, 40);
+    });
+  });
+
+  document.querySelectorAll('.nav-links > a').forEach(a=>{
+    a.addEventListener('mouseenter', closeAll);
+    a.addEventListener('focus', closeAll);
+  });
+
+  // Focus handling
+  navLinks.addEventListener('focusin', (e)=>{
+    const item = e.target.closest('.nav-item.has-mega');
+    if(item) openItem(item);
+  });
+  navLinks.addEventListener('focusout', (e)=>{
+    const intoMega = e.relatedTarget && e.relatedTarget.closest('.mega');
+    if(!intoMega) closeAll();
+  });
+
+  backdrop.addEventListener('click', closeAll);
+  window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeAll(); });
+
+  /* ===== Reveal-on-scroll ===== */
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!prefersReduced){
+    const io = new IntersectionObserver((entries)=>{
+      for(const ent of entries){
+        if(ent.isIntersecting){ ent.target.classList.add('in'); io.unobserve(ent.target); }
+      }
+    }, {threshold: 0.18});
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el=> el.classList.add('in'));
+  }
+
+  /* ===== Projects row: arrows + drag with momentum (keeps vertical scroll) ===== */
+  const row = document.getElementById('cardsRow');
+  const prev = document.getElementById('cardsPrev');
+  const next = document.getElementById('cardsNext');
+
+  function pageWidth(){ return row.clientWidth * 0.9; }
+  prev.addEventListener('click', ()=> row.scrollBy({left: -pageWidth(), behavior:'smooth'}));
+  next.addEventListener('click', ()=> row.scrollBy({left:  pageWidth(), behavior:'smooth'}));
+
+  let dragging=false, lockAxis=null;
+  let startX=0, startY=0, startScroll=0, lastT=0, lastX=0, velocity=0;
+  let dragDist=0, justDraggedAt=0, capturedId=null;
+  const DECEL = 0.0021, SLOP = 10, DRAG_CLICK_COOLDOWN = 140;
+
+  function momentum(v){
+    let prevT = performance.now();
+    function step(){
+      const now = performance.now();
+      const dt = now - prevT; prevT = now;
+      const sign = Math.sign(v);
+      v -= sign * DECEL * dt;
+      if(sign !== Math.sign(v) || Math.abs(v) < 0.04) return;
+      row.scrollLeft -= v * dt;
+      requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  row.addEventListener('pointerdown', (e)=>{
+    dragging = true; lockAxis = null; row.classList.add('dragging');
+    startX = e.clientX; startY = e.clientY; startScroll = row.scrollLeft;
+    lastX = e.clientX; lastT = performance.now(); dragDist = 0; capturedId=null;
+    const card = e.target.closest('.promo-card');
+    if(card){ card._downX = e.clientX; card._downY = e.clientY; card._downT = e.timeStamp; }
+  });
+
+  row.addEventListener('pointermove', (e)=>{
+    if(!dragging) return;
+    const dx = e.clientX - startX, dy = e.clientY - startY;
+    if(!lockAxis){
+      if(Math.abs(dx) > 6 && Math.abs(dx) > Math.abs(dy)*1.15) lockAxis = 'x';
+      else if(Math.abs(dy) > 6) lockAxis = 'y';
+    }
+    if(lockAxis === 'x'){
+      if(!capturedId){ row.setPointerCapture(e.pointerId); capturedId=e.pointerId; }
+      row.scrollLeft = startScroll - dx;
+      dragDist += Math.abs(e.clientX - lastX);
+      const now = performance.now();
+      velocity = (e.clientX - lastX) / Math.max(1, (now - lastT));
+      lastX = e.clientX; lastT = now;
+    }
+  }, {passive:true});
+
+  function endDrag(){
+    if(!dragging) return;
+    dragging = false; row.classList.remove('dragging');
+    if(capturedId!==null){ try{ row.releasePointerCapture(capturedId);}catch{} capturedId=null; }
+    if(lockAxis === 'x' && Math.abs(velocity) > 0.01) momentum(velocity);
+    if(dragDist > SLOP) justDraggedAt = performance.now();
+    lockAxis = null;
+  }
+  row.addEventListener('pointerup', endDrag);
+  row.addEventListener('pointercancel', endDrag);
+  row.addEventListener('pointerleave', endDrag);
+
+  function shouldOpenFromClick(card, clickEvent){
+    const now = performance.now();
+    if(now - justDraggedAt < DRAG_CLICK_COOLDOWN) return false;
+    const dx = Math.abs((card._downX ?? clickEvent.clientX) - clickEvent.clientX);
+    const dy = Math.abs((card._downY ?? clickEvent.clientY) - clickEvent.clientY);
+    const dt = (clickEvent.timeStamp - (card._downT ?? clickEvent.timeStamp));
+    return dx < SLOP && dy < SLOP && dt < 800;
+  }
+
+  /* ===== Project Modal ===== */
+  const modal     = document.getElementById('projectModal');
+  const mBack     = document.getElementById('modalBackdrop');
+  const mPanel    = modal.querySelector('.modal-panel');
+  const mClose    = document.getElementById('modalClose');
+  const mImg      = document.getElementById('modalImg');
+  const mSub      = document.getElementById('modalSub');
+  const mTitle    = document.getElementById('modalTitle');
+  const mDesc     = document.getElementById('modalDesc');
+  const mBullets  = document.getElementById('modalBullets');
+  const mTech     = document.getElementById('modalTech');
+  let lastFocus = null;
+
+  function fillFrom(card){
+    mImg.src   = card.dataset.img || card.querySelector('.promo-media img')?.src || '';
+    mImg.alt   = card.dataset.title || 'Project image';
+    mSub.textContent   = card.dataset.sub   || '';
+    mTitle.textContent = card.dataset.title || '';
+    mDesc.textContent  = card.dataset.desc  || 'Detailed description coming soon.';
+    mTech.textContent  = card.dataset.tech  || '';
+    mBullets.innerHTML = '';
+    (card.dataset.bullets || 'Key point A;Key point B;Key point C')
+      .split(';').map(s=>s.trim()).forEach(t=>{
+        const li = document.createElement('li'); li.textContent = t; mBullets.appendChild(li);
+      });
+  }
+  function openModalFrom(card){
+    fillFrom(card);
+    lastFocus = document.activeElement;
+    document.body.classList.add('no-scroll');
+    modal.classList.remove('closing');
+    modal.classList.add('open');
+    requestAnimationFrame(()=> modal.classList.add('animate-in'));
+    mPanel.focus();
+  }
+  function closeModalQuick(){
+    modal.classList.remove('animate-in');
+    modal.classList.add('closing');
+    const done = (e)=>{
+      if(e.target!==mPanel) return;
+      modal.removeEventListener('transitionend', done);
+      modal.classList.remove('open','closing');
+      document.body.classList.remove('no-scroll');
+      if(lastFocus) lastFocus.focus();
+    };
+    modal.addEventListener('transitionend', done);
+    setTimeout(()=>{ if(modal.classList.contains('closing')){ modal.classList.remove('open','closing'); document.body.classList.remove('no-scroll'); } }, 500);
+  }
+  mBack.addEventListener('click', closeModalQuick);
+  mClose.addEventListener('click', closeModalQuick);
+  window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && modal.classList.contains('open')) closeModalQuick(); });
+
+  document.querySelectorAll('.promo-card').forEach(card=>{
+    card.addEventListener('click', (e)=>{
+      if(e.button !== 0) return;
+      if(shouldOpenFromClick(card, e)) openModalFrom(card);
+      e.preventDefault();
+    });
+    card.addEventListener('auxclick', (e)=>{ e.preventDefault(); });
+    card.setAttribute('tabindex','0');
+    card.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); openModalFrom(card); }});
+    const plus = card.querySelector('.card-plus');
+    plus?.addEventListener('click', (e)=>{ e.stopPropagation(); e.preventDefault(); openModalFrom(card); });
+  });
+</script>
+
+
+
+</body>
+</html>
