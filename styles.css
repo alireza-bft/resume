@@ -392,13 +392,13 @@ section{ padding:56px 0 }
 .school-uf .edu-watermark{
   transform: translateY(-82px);
   width:min(38vw, 500px); height:min(24vw, 200px);
-  background-image:url("/florida-gators-logo.png");
+  background-image:url("florida-gators-logo.png");
   right:375px; opacity:.055; filter: grayscale(0%) saturate(135%) contrast(120%);
 }
 .school-uri{ --bar-1:#002147; --bar-2:#75B2DD }
 .school-uri .edu-watermark{
   transform: translateY(-140px);
-  background-image:url("/uri_mascot.jpg");
+  background-image:url("uri_mascot.jpg");
   width:min(38vw, 640px); height:min(24vw, 280px);
   right:360px; opacity:.08; filter: grayscale(0%) saturate(135%) contrast(120%);
 }
@@ -808,4 +808,5 @@ section{ padding:56px 0 }
   margin-right: 0.15em;
   color: #222;
 }
+
 
