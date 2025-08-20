@@ -904,11 +904,57 @@
     let paused = false;
     toggle.addEventListener('click', ()=>{ paused = !paused; setPaused(paused); });
   })();
+  const cards = document.querySelectorAll('.promo-card');
+
+function openModalFrom(card){
+  lastFocus = document.activeElement;
+  fillFrom(card);
+  modal.classList.add('open');           // mount
+  document.body.classList.add('no-scroll');
+
+  // animate in on next frame
+  requestAnimationFrame(()=> modal.classList.add('animate-in'));
+  mPanel.focus();
+}
+
+function closeModal(){
+  if(!modal.classList.contains('open')) return;
+  modal.classList.remove('animate-in');
+  modal.classList.add('closing');
+
+  const done = () => {
+    modal.classList.remove('closing','open');
+    document.body.classList.remove('no-scroll');
+    mBack.removeEventListener('transitionend', done);
+    if (lastFocus) lastFocus.focus();
+  };
+  // wait for backdrop/panel transition to finish
+  mBack.addEventListener('transitionend', done);
+}
+
+// open when clicking the card (or the + button), but ignore drag
+cards.forEach(card=>{
+  card.addEventListener('click', (e)=>{
+    // prevent the anchor’s default (#hash) scroll
+    e.preventDefault();
+
+    // ignore if this click came from a horizontal drag
+    if(!shouldOpenFromClick(card, e)) return;
+
+    openModalFrom(card);
+  });
+});
+
+// close actions
+mClose.addEventListener('click', closeModal);
+mBack.addEventListener('click', closeModal);
+window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
 </script>
 
 
 </body>
 </html>
+
 
 
 
