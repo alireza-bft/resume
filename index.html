@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Hover edge to reveal nav when hidden -->
@@ -122,323 +123,498 @@
 
   <!-- HERO -->
   <main id="top">
-    <section class="container hero reveal in-on-load">
-      <div class="hero-grid">
-        <div>
-          <span class="tag">👋 Hello</span>
-          <h1 class="headline load-rise">I'm
-            <span class="name-gradient">Alireza Bafti</span> — Flood Modeling • GeoAI • Remote Sensing
-          </h1>
-          <p class="sub load-rise">
-            Graduate Student in <strong>Ocean Engineering (URI)</strong>. I integrate
-            <strong>IN-CORE</strong>, <strong>SWMM</strong>, <strong>BRAILS</strong>, <strong>ArcPy</strong>, and deep learning to model
-            <strong>compound coastal/pluvial flooding</strong> and monitor flood risk.
-          </p>
-          <div class="row" style="margin-top:18px">
-            <a class="btn" href="#projects">View Projects</a>
-            <a class="btn ghost" href="#contact">Contact Me</a>
+      <!-- HERO (kept at very top) -->
+      <section class="container hero reveal in-on-load">
+        <div class="hero-grid">
+          <div>
+            <span class="tag">👋 Hello</span>
+            <h1 class="headline load-rise">I'm
+                <span class="name-gradient">Alireza Bafti</span> — Civil &amp; Water Engineer<br>
+                <span class="subfocus">Deep Learning • Hydrology • Remote Sensing • Data Analysis</span>
+            </h1>
+
+            <p class="sub load-rise">
+                Passionate in integration of novel <strong>deep learning</strong>,
+                <strong>remote sensing</strong>, and <strong>physicial models</strong> to address
+                critical environmental challenges. <br> My work focuses on applying advanced techniques to
+                monitor environmental processes.
+            </p>
+
+            <div class="row" style="margin-top:18px">
+              <a class="btn" href="#projects">View Projects</a>
+              <a class="btn ghost" href="#contact">Contact Me</a>
+            </div>
+          </div>
+          <figure class="hero-card">
+            <img class="hero-photo" src="/photo_2025-08-17_11-23-28 copy.jpg" alt="Coastal flood modeling visualization" />
+            <figcaption class="muted" style="margin-top:10px">Southeast Lighthouse, Block Island</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="reveal">
+          <div class="container">
+  <h2 class="section-title load-rise"><span></span> About</h2>
+
+  <article class="card about-card">
+    <div class="manuscript">
+      <p class="drop-cap">
+        Graduate researcher with <strong>7+ years of postgraduate experience</strong> in
+        <em>"Civil & Water Engineering"</em>, <em>"Soil, Water, and Ecosystem Sciences"</em>,
+        and <em>"Ocean Engineering"</em>, driving advances in hydrological modeling, remote sensing,
+        and AI applications. Over <strong>6 years of expertise</strong> in application of deep learning for hydrological
+        time series and satellite image analysis, with a strong track record of integrating VIS/NIR
+        and Microwave remote sensing with AI and physics-based hydrological models to monitor key
+        hydrological processes, including <strong>compound flooding, soil moisture, drought, evapotranspiration,
+        and streamflow</strong>.
+      </p>
+
+      <p>
+        Recognized for <strong>cross-disciplinary, international collaborations</strong> at leading institutions
+        and in projects funded by reputable organizations such as <strong>NSF</strong> and <strong>FEMA</strong>. Proven skill and intrest in developing
+        novel deep learning concepts and architectures. Skilled at bridging
+        field experimentation with computational modeling to deliver data-driven insights for
+        <strong>resilience, water sustainability, and disaster risk reduction</strong>.
+      </p>
+    </div>
+
+    <ul class="bio-list">
+      <li>📍 Rhode Island, USA</li>
+    </ul>
+      <!-- Logos marquee -->
+
+
+    <div class="logos-marquee logos--minimal" aria-label="Affiliations and funders">
+      <div class="logos-viewport" aria-live="polite">
+
+
+        <div class="logos-track">
+          <ul class="logos-row">
+            <li><img src="/NSF.png"  alt="National Science Foundation"></li>
+            <li><img src="/fema_logo.png" alt="FEMA"></li>
+            <li><img src="/uri_logo.png"  alt="University of Rhode Island"></li>
+            <li><img src="/uf_logo.png"   alt="University of Florida"></li>
+            <li><img src="/lund univeristy logo.png" alt="Lund University"></li>
+            <li><img src="/uf logo.png"   alt="University of Florida"></li>
+            <li><img src="/CDWR logo.jpg" alt="CDWR"></li>
+            <li><img src="/erasmus-logo-1.png" alt="Erasmus+"></li>
+          </ul>
+
+          <!-- duplicate for seamless loop -->
+          <ul class="logos-row" aria-hidden="true">
+            <li><img src="/NSF.png"  alt=""></li>
+            <li><img src="/fema_logo.png" alt=""></li>
+            <li><img src="/uri_logo.png"  alt=""></li>
+            <li><img src="/uf_logo.png"   alt=""></li>
+            <li><img src="/lund univeristy logo.png" alt="Lund University"></li>
+            <li><img src="/uf logo.png"   alt=""></li>
+            <li><img src="/CDWR logo.jpg" alt=""></li>
+            <li><img src="/erasmus-logo-1.png" alt=""></li>
+          </ul>
+        </div>
+
+      </div>
+    <button class="logos-toggle" type="button" aria-pressed="false" aria-label="Pause auto-scrolling">
+          <span class="toggle-icon" aria-hidden="true">❚❚</span>
+    </button>
+
+
+</div>
+
+
+
+  </article>
+</div>
+
+        </section>
+
+
+
+      <!-- EDUCATION (moved up right after About) -->
+      <section id="education" class="reveal">
+        <div class="container">
+          <h2 class="section-title load-rise"><span></span> Education</h2>
+          <div class="edu-list">
+            <!-- UF -->
+            <article class="edu-card school-uf">
+              <div class="edu-topbar" aria-hidden="true"></div>
+              <div class="edu-left">
+                <img class="edu-logo" src="/uf_logo.png" alt="University of Florida logo">
+              </div>
+              <div class="edu-text">
+                <h3>M.S., Soil, and Water Sciences — University of Florida</h3>
+                <p class="muted">Jan 2023 – Aug 2026</p>
+              </div>
+              <i class="edu-watermark" aria-hidden="true"></i>
+            </article>
+
+            <!-- URI -->
+            <article class="edu-card school-uri">
+              <div class="edu-topbar" aria-hidden="true"></div>
+              <div class="edu-left">
+                <img class="edu-logo" src="/uri_logo.png" alt="University of Rhode Island logo">
+              </div>
+              <div class="edu-text">
+                <h3>M.S., Ocean Engineering — University of Rhode Island</h3>
+                <p class="muted">Jan 2025 – Aug 2026 (expected)</p>
+              </div>
+              <i class="edu-watermark" aria-hidden="true"></i>
+            </article>
+
+            <!-- Ferdowsi — M.S. -->
+            <article class="edu-card school-fum">
+              <div class="edu-topbar" aria-hidden="true"></div>
+              <div class="edu-left">
+                <img class="edu-logo" src="/fum_logo.png" alt="Ferdowsi University of Mashhad logo">
+              </div>
+              <div class="edu-text">
+                <h3>M.S., Water Engineering — Ferdowsi University of Mashhad</h3>
+                <p class="muted">2019 – 2022</p>
+              </div>
+            </article>
+
+            <!-- Ferdowsi — B.S. -->
+            <article class="edu-card school-fum">
+              <div class="edu-topbar" aria-hidden="true"></div>
+              <div class="edu-left">
+                <img class="edu-logo" src="/fum_logo.png" alt="Ferdowsi University of Mashhad logo">
+              </div>
+              <div class="edu-text">
+                <h3>B.S., Civil Engineering — Ferdowsi University of Mashhad</h3>
+                <p class="muted">2011 – 2015</p>
+              </div>
+            </article>
           </div>
         </div>
-        <figure class="hero-card">
-          <img class="hero-photo" src="photo_2025-08-13_04-03-16.jpg" alt="Coastal flood modeling visualization" />
-          <figcaption class="muted" style="margin-top:10px">Hover the image for a subtle zoom.</figcaption>
-        </figure>
-      </div>
-    </section>
+      </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="reveal">
-      <div class="container">
-        <h2 class="section-title load-rise"><span></span> About</h2>
-        <div class="grid cols-2">
-          <div class="card">
-            <h3>Bio</h3>
-            <p>Researcher and engineer focused on <strong>flood modeling</strong>, <strong>GeoAI</strong>, and <strong>remote sensing</strong>. I build data-driven & physics-based tools for resilience planning and risk reduction.</p>
-            <ul>
-              <li>🧠 Interests: Compound flooding, drainage networks, risk analytics</li>
-              <li>🛠 Tools: IN-CORE, SWMM, BRAILS, ArcPy, HEC-RAS</li>
-              <li>📍 Rhode Island, USA</li>
+      <!-- PROJECTS -->
+      <section id="projects" class="reveal">
+        <div class="container">
+          <h2 class="section-title load-rise"><span></span> Projects</h2>
+
+          <div class="cards-wrap">
+            <button class="cards-arrow left" id="cardsPrev" aria-label="Previous">‹</button>
+
+            <div class="cards-row" id="cardsRow">
+              <!-- Each card carries data-* for the modal -->
+              <a class="promo-card"
+                 id="proj-fema" href="#proj-fema"
+                 data-title="Compound Flood Modeling"
+                 data-sub="FEMA & NSF — Coastal + pluvial scenarios"
+                 data-tech="Python · SWMM · HEC-RAS · GIS"
+                 data-img="assets/projects/compound_flood.jpg"
+                 data-desc="Probabilistic compound flooding across coastal & urban catchments. Scenario generation, surge/tide + precipitation coupling, and street-level flow routing."
+                 data-bullets="Scenario synthesis;Coupling surge/tide + rainfall;Uncertainty & exceedance maps">
+                <div class="promo-media"><img src="assets/projects/compound_flood.jpg" alt="Compound flooding visualization" /></div>
+                <div class="promo-body">
+                  <p class="promo-kicker">Compound</p>
+                  <h3>Compound Flood Modeling</h3>
+                  <p class="promo-sub">FEMA & NSF — Coastal + pluvial scenarios</p>
+                  <p class="promo-foot">Python · SWMM · HEC-RAS · GIS</p>
+                </div>
+                <button class="card-plus" type="button" aria-label="Open details">+</button>
+              </a>
+
+              <a class="promo-card"
+                 id="proj-risk" href="#proj-risk"
+                 data-title="Flood-Risk Monitoring"
+                 data-sub="IN-CORE · SWMM · BRAILS · ArcPy"
+                 data-tech="GeoAI · Automation · Building inventories"
+                 data-img="assets/projects/risk_monitor.jpg"
+                 data-desc="Continuous risk analytics pipeline using IN-CORE fragilities, building attributes from BRAILS, and hydrodynamic outputs to produce exposure time series."
+                 data-bullets="Automated data pulls;IN-CORE fragilities;Operational dashboard">
+                <div class="promo-media"><img src="assets/projects/risk_monitor.jpg" alt="Risk monitoring dashboard" /></div>
+                <div class="promo-body">
+                  <p class="promo-kicker">Risk</p>
+                  <h3>Flood-Risk Monitoring</h3>
+                  <p class="promo-sub">IN-CORE · SWMM · BRAILS · ArcPy</p>
+                  <p class="promo-foot">GeoAI · Automation · Building inventories</p>
+                </div>
+                <button class="card-plus" type="button" aria-label="Open details">+</button>
+              </a>
+
+              <a class="promo-card"
+                 id="proj-twin" href="#proj-twin"
+                 data-title="Urban Flood Digital Twin"
+                 data-sub="Neighborhood forecasts with uncertainty"
+                 data-tech="LSTM · FastAPI · Tiled maps"
+                 data-img="assets/projects/digital_twin.jpg"
+                 data-desc="Real-time twin that blends SWMM states with LSTM nowcasts; serves tiles/rasters via FastAPI for dashboards and emergency routing."
+                 data-bullets="State fusion (SWMM + LSTM);FastAPI tile server;Uncertainty bands">
+                <div class="promo-media"><img src="assets/projects/digital_twin.jpg" alt="Urban flood digital twin" /></div>
+                <div class="promo-body">
+                  <p class="promo-kicker">Twin</p>
+                  <h3>Urban Flood Digital Twin</h3>
+                  <p class="promo-sub">Neighborhood forecasts with uncertainty</p>
+                  <p class="promo-foot">LSTM · FastAPI · Tiled maps</p>
+                </div>
+                <button class="card-plus" type="button" aria-label="Open details">+</button>
+              </a>
+
+              <a class="promo-card"
+                 id="proj-et" href="#proj-et"
+                 data-title="ET Estimation — Attention U-Net"
+                 data-sub="Deep learning + metaheuristics"
+                 data-tech="TensorFlow · Remote sensing"
+                 data-img="assets/projects/et_unet.jpg"
+                 data-desc="Attention U-Net trained on flux towers & satellite inputs; evolutionary search for hyper-parameters; uncertainty via ensembling."
+                 data-bullets="Attention U-Net;Flux tower targets;Ensembled uncertainty">
+                <div class="promo-media"><img src="assets/projects/et_unet.jpg" alt="ET estimation with Attention U-Net" /></div>
+                <div class="promo-body">
+                  <p class="promo-kicker">DL</p>
+                  <h3>ET Estimation — Attention U-Net</h3>
+                  <p class="promo-sub">Deep learning + metaheuristics</p>
+                  <p class="promo-foot">TensorFlow · Remote sensing</p>
+                </div>
+                <button class="card-plus" type="button" aria-label="Open details">+</button>
+              </a>
+
+              <a class="promo-card"
+                 id="proj-coastal" href="#proj-coastal"
+                 data-title="Coastal Surge Mapper"
+                 data-sub="Terrain-aware routing & analysis"
+                 data-tech="HEC-RAS · SWMM · GDAL"
+                 data-img="assets/projects/coastal_mapper.jpg"
+                 data-desc="Surge/tide synthesizer with DEM conditioning and path-of-least-resistance routing to identify hot spots and critical infrastructure."
+                 data-bullets="DEM conditioning;Routing by least resistance;Critical asset analysis">
+                <div class="promo-media"><img src="assets/projects/coastal_mapper.jpg" alt="Coastal surge mapping" /></div>
+                <div class="promo-body">
+                  <p class="promo-kicker">Coastal</p>
+                  <h3>Coastal Surge Mapper</h3>
+                  <p class="promo-sub">Terrain-aware routing & analysis</p>
+                  <p class="promo-foot">HEC-RAS · SWMM · GDAL</p>
+                </div>
+                <button class="card-plus" type="button" aria-label="Open details">+</button>
+              </a>
+            </div>
+
+            <button class="cards-arrow right" id="cardsNext" aria-label="Next">›</button>
+          </div>
+
+          <div class="cards-dots" id="cardsDots" aria-label="Projects carousel pagination"></div>
+        </div>
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section id="publications" class="reveal pubs-section">
+        <div class="container">
+          <h2 class="section-title"><span></span> Publications</h2>
+
+          <!-- Journal Articles -->
+          <div class="pub-panel">
+            <h3 class="pub-group-title">Journal Articles</h3>
+            <ul class="pub-list">
+
+              <!-- JoH: Regional Studies -->
+              <li class="pub-item j-brand--jhrs" data-brand>
+                <span class="journal-chip journal-chip--left">
+                  <i class="journal-mark"></i>
+                  JoH: Regional Studies
+                  <div class="j-pop">
+                    <div class="j-pop-head">
+                      <span class="j-pop-logo"><img src="/X22145818.jpg" alt="JoH: Regional Studies logo"></span>
+                      <div>
+                        <p class="j-pop-title">Journal of Hydrology: Regional Studies</p>
+                        <p class="j-pop-sub">Elsevier • Water Resources</p>
+                      </div>
+                    </div>
+                    <div class="j-pop-metrics">
+                      <span class="j-pop-badge">Impact Factor 5.0</span>
+                      <span class="j-pop-badge">CiteScore 7.4</span>
+                    </div>
+                  </div>
+                </span>
+
+                Ahmadi, A., Daccache, A., He, M., Namadi, P., <strong>Bafti, A. G.</strong>, Sandhu, P., Bai, Z., Snyder, R. L., &amp; Kadir, T. <span class="pub-year">2025</span><br>
+                Enhancing the accuracy and generalizability of reference evapotranspiration forecasting in California using deep global learning.
+                <span class="pub-actions">
+                  <a class="btn-link" href="https://doi.org/10.1016/j.ejrh.2025.102339" target="_blank" rel="noopener">DOI</a>
+                </span>
+              </li>
+
+              <!-- Atmospheric Research -->
+              <li class="pub-item j-brand--atres" data-brand>
+                <span class="journal-chip journal-chip--left">
+                  <i class="journal-mark"></i>
+                  Atmospheric Research
+                  <div class="j-pop">
+                    <div class="j-pop-head">
+                      <span class="j-pop-logo"><img src="/X01698095.jpg" alt="Atmospheric Research logo"></span>
+                      <div>
+                        <p class="j-pop-title">Atmospheric Research</p>
+                        <p class="j-pop-sub">Elsevier • Atmospheric Sciences</p>
+                      </div>
+                    </div>
+                    <div class="j-pop-metrics">
+                      <span class="j-pop-badge">Impact Factor 4.4</span>
+                      <span class="j-pop-badge">CiteScore 9.2</span>
+                    </div>
+                  </div>
+                </span>
+
+                <strong>Bafti, A. G.</strong>, Ahmadi, A., Abbasi, A., Kamangir, H., Jamali, S., Hashemi, H. <span class="pub-year">2024</span><br>
+                Automated actual evapotranspiration estimation: Hybrid model of a novel attention based U-Net and metaheuristic algorithms.
+                <span class="pub-actions">
+                  <a class="btn-link" href="https://doi.org/10.1016/j.atmosres.2023.107107" target="_blank" rel="noopener">DOI</a>
+                </span>
+              </li>
+
+              <!-- Journal of Hydrology -->
+              <li class="pub-item j-brand--joh" data-brand>
+                <span class="journal-chip journal-chip--left">
+                  <i class="journal-mark"></i>
+                  Journal of Hydrology
+                  <div class="j-pop">
+                    <div class="j-pop-head">
+                      <span class="j-pop-logo"><img src="/X00221694.jpg" alt="Journal of Hydrology logo"></span>
+                      <div>
+                        <p class="j-pop-title">Journal of Hydrology</p>
+                        <p class="j-pop-sub">Elsevier • Hydrology</p>
+                      </div>
+                    </div>
+                    <div class="j-pop-metrics">
+                      <span class="j-pop-badge">Impact Factor 6.3</span>
+                      <span class="j-pop-badge">CiteScore 11.1</span>
+                    </div>
+                  </div>
+                </span>
+
+                Alizadeh, B., <strong>Bafti, A. G.</strong>, Kamangir, H., Zhang, Y., Wright, D. B., &amp; Franz, K. J. <span class="pub-year">2021</span><br>
+                A novel attention-based LSTM cell post-processor coupled with bayesian optimization for streamflow prediction.
+                <span class="pub-actions">
+                  <a class="btn-link" href="https://doi.org/10.1016/j.jhydrol.2021.126526" target="_blank" rel="noopener">DOI</a>
+                </span>
+              </li>
+
+              <!-- Water (MDPI) -->
+              <li class="pub-item j-brand--water" data-brand>
+                <span class="journal-chip journal-chip--left">
+                  <i class="journal-mark"></i>
+                  Water (Switzerland)
+                  <div class="j-pop">
+                    <div class="j-pop-head">
+                      <span class="j-pop-logo"><img src="/water-logo.png" alt="Water (MDPI) logo"></span>
+                      <div>
+                        <p class="j-pop-title">Water (Switzerland)</p>
+                        <p class="j-pop-sub">MDPI • Water Resources</p>
+                      </div>
+                    </div>
+                    <div class="j-pop-metrics">
+                      <span class="j-pop-badge">Impact Factor 3</span>
+                      <span class="j-pop-badge">CiteScore 6</span>
+                    </div>
+                  </div>
+                </span>
+
+                Doulabian, S., Tousi, E. G., Aghlmand, R., Alizadeh, B., <strong>Bafti, A. G.</strong>, Abbasi, A. <span class="pub-year">2021</span><br>
+                Evaluation of Integrating SWAT Model into a Multi-Criteria Decision Analysis towards Reliable Rainwater Harvesting Systems.
+                <span class="pub-actions">
+                  <a class="btn-link" href="https://doi.org/10.3390/w13141935" target="_blank" rel="noopener">DOI</a>
+                </span>
+              </li>
+
             </ul>
           </div>
+
+          <!-- Conferences -->
+          <div class="pub-panel">
+            <h3 class="pub-group-title">Conferences</h3>
+            <ul class="pub-list bullets">
+              <li class="pub-item slim">AGU 2023 — High-Resolution Profile Soil Moisture Predictions Using Data Fusion and Deep Learning</li>
+              <li class="pub-item slim">ASA/CSSA/SSSA 2023 — Evaluation of C- and L-Band Microwave Radiometer for Soil Moisture Estimation with Machine Learning</li>
+              <li class="pub-item slim">ASA/CSSA/SSSA 2023 — Root Zone Soil Moisture Retrieval with an L-Band Radiometer: A Hybrid Modeling Approach</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="reveal">
+        <div class="container">
+          <h2 class="section-title load-rise"><span></span> Experience</h2>
           <div class="card">
-            <h3>Academic Experience</h3>
             <div class="timeline">
               <div class="timeline-item">
-                <strong>Graduate Student, Ocean Engineering</strong> — University of Rhode Island (Jan 2025–Sep 2026)
-                <div class="muted">FEMA/NSF: compound flooding & flood-risk monitoring (IN-CORE · SWMM · BRAILS · ArcPy).</div>
+                <strong>Graduate Research Assistant</strong> — University of Rhode Island (Jan 2025–Sep 2026)
+                <div class="muted">compound flood modeling & flood-risk monitoring (SWMM · ArcPy · IN-CORE · BRAILS).</div>
               </div>
               <div class="timeline-item">
-                <strong>Research Assistant</strong> — University of Florida (Jan 2023–Aug 2024)
-                <div class="muted">ET & soil moisture with DL/RS; ArcGIS; SWMM/HEC-RAS workflows.</div>
+                <strong>Graduate Research Assistant</strong> — University of Florida (Jan 2023–Aug 2024)
+                <div class="muted">soil moisture estimation with DL and RS; microwave radiometer; HYDRUS.</div>
               </div>
               <div class="timeline-item">
                 <strong>Visiting Researcher</strong> — Lund University (Oct 2021–Dec 2021)
-                <div class="muted">Hydrology & remote sensing collaboration (Erasmus+ ICM).</div>
+                <div class="muted">flood hazard monitoring, DL/RS, HEC-RAS, HEC-HMS (Erasmus+ ICM).</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="reveal">
-      <div class="container">
-        <h2 class="section-title load-rise"><span></span> Skills</h2>
-        <div class="row">
-          <span class="chip">Python</span>
-          <span class="chip">ArcPy</span>
-          <span class="chip">TensorFlow</span>
-          <span class="chip">scikit-learn</span>
-          <span class="chip">LSTM / U-Net / Attention</span>
-          <span class="chip">SWMM</span>
-          <span class="chip">HEC-RAS</span>
-          <span class="chip">HEC-HMS</span>
-          <span class="chip">IN-CORE</span>
-          <span class="chip">BRAILS</span>
-          <span class="chip">GIS / Remote Sensing</span>
-          <span class="chip">PostGIS</span>
-          <span class="chip">Docker</span>
-          <span class="chip">Airflow</span>
-          <span class="chip">AWS/GCP</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="reveal">
-      <div class="container">
-        <h2 class="section-title load-rise"><span></span> Projects</h2>
-
-        <div class="cards-wrap">
-          <button class="cards-arrow left" id="cardsPrev" aria-label="Previous">‹</button>
-
-          <div class="cards-row" id="cardsRow">
-            <!-- Each card carries data-* for the modal -->
-            <a class="promo-card"
-               id="proj-fema" href="#proj-fema"
-               data-title="Compound Flood Modeling"
-               data-sub="FEMA & NSF — Coastal + pluvial scenarios"
-               data-tech="Python · SWMM · HEC-RAS · GIS"
-               data-img="assets/projects/compound_flood.jpg"
-               data-desc="Probabilistic compound flooding across coastal & urban catchments. Scenario generation, surge/tide + precipitation coupling, and street-level flow routing."
-               data-bullets="Scenario synthesis;Coupling surge/tide + rainfall;Uncertainty & exceedance maps">
-              <div class="promo-media"><img src="assets/projects/compound_flood.jpg" alt="Compound flooding visualization" /></div>
-              <div class="promo-body">
-                <p class="promo-kicker">Compound</p>
-                <h3>Compound Flood Modeling</h3>
-                <p class="promo-sub">FEMA & NSF — Coastal + pluvial scenarios</p>
-                <p class="promo-foot">Python · SWMM · HEC-RAS · GIS</p>
-              </div>
-              <button class="card-plus" type="button" aria-label="Open details">+</button>
-            </a>
-
-            <a class="promo-card"
-               id="proj-risk" href="#proj-risk"
-               data-title="Flood-Risk Monitoring"
-               data-sub="IN-CORE · SWMM · BRAILS · ArcPy"
-               data-tech="GeoAI · Automation · Building inventories"
-               data-img="assets/projects/risk_monitor.jpg"
-               data-desc="Continuous risk analytics pipeline using IN-CORE fragilities, building attributes from BRAILS, and hydrodynamic outputs to produce exposure time series."
-               data-bullets="Automated data pulls;IN-CORE fragilities;Operational dashboard">
-              <div class="promo-media"><img src="assets/projects/risk_monitor.jpg" alt="Risk monitoring dashboard" /></div>
-              <div class="promo-body">
-                <p class="promo-kicker">Risk</p>
-                <h3>Flood-Risk Monitoring</h3>
-                <p class="promo-sub">IN-CORE · SWMM · BRAILS · ArcPy</p>
-                <p class="promo-foot">GeoAI · Automation · Building inventories</p>
-              </div>
-              <button class="card-plus" type="button" aria-label="Open details">+</button>
-            </a>
-
-            <a class="promo-card"
-               id="proj-twin" href="#proj-twin"
-               data-title="Urban Flood Digital Twin"
-               data-sub="Neighborhood forecasts with uncertainty"
-               data-tech="LSTM · FastAPI · Tiled maps"
-               data-img="assets/projects/digital_twin.jpg"
-               data-desc="Real-time twin that blends SWMM states with LSTM nowcasts; serves tiles/rasters via FastAPI for dashboards and emergency routing."
-               data-bullets="State fusion (SWMM + LSTM);FastAPI tile server;Uncertainty bands">
-              <div class="promo-media"><img src="assets/projects/digital_twin.jpg" alt="Urban flood digital twin" /></div>
-              <div class="promo-body">
-                <p class="promo-kicker">Twin</p>
-                <h3>Urban Flood Digital Twin</h3>
-                <p class="promo-sub">Neighborhood forecasts with uncertainty</p>
-                <p class="promo-foot">LSTM · FastAPI · Tiled maps</p>
-              </div>
-              <button class="card-plus" type="button" aria-label="Open details">+</button>
-            </a>
-
-            <a class="promo-card"
-               id="proj-et" href="#proj-et"
-               data-title="ET Estimation — Attention U-Net"
-               data-sub="Deep learning + metaheuristics"
-               data-tech="TensorFlow · Remote sensing"
-               data-img="assets/projects/et_unet.jpg"
-               data-desc="Attention U-Net trained on flux towers & satellite inputs; evolutionary search for hyper-parameters; uncertainty via ensembling."
-               data-bullets="Attention U-Net;Flux tower targets;Ensembled uncertainty">
-              <div class="promo-media"><img src="assets/projects/et_unet.jpg" alt="ET estimation with Attention U-Net" /></div>
-              <div class="promo-body">
-                <p class="promo-kicker">DL</p>
-                <h3>ET Estimation — Attention U-Net</h3>
-                <p class="promo-sub">Deep learning + metaheuristics</p>
-                <p class="promo-foot">TensorFlow · Remote sensing</p>
-              </div>
-              <button class="card-plus" type="button" aria-label="Open details">+</button>
-            </a>
-
-            <a class="promo-card"
-               id="proj-coastal" href="#proj-coastal"
-               data-title="Coastal Surge Mapper"
-               data-sub="Terrain-aware routing & analysis"
-               data-tech="HEC-RAS · SWMM · GDAL"
-               data-img="assets/projects/coastal_mapper.jpg"
-               data-desc="Surge/tide synthesizer with DEM conditioning and path-of-least-resistance routing to identify hot spots and critical infrastructure."
-               data-bullets="DEM conditioning;Routing by least resistance;Critical asset analysis">
-              <div class="promo-media"><img src="assets/projects/coastal_mapper.jpg" alt="Coastal surge mapping" /></div>
-              <div class="promo-body">
-                <p class="promo-kicker">Coastal</p>
-                <h3>Coastal Surge Mapper</h3>
-                <p class="promo-sub">Terrain-aware routing & analysis</p>
-                <p class="promo-foot">HEC-RAS · SWMM · GDAL</p>
-              </div>
-              <button class="card-plus" type="button" aria-label="Open details">+</button>
-            </a>
-          </div>
-
-          <button class="cards-arrow right" id="cardsNext" aria-label="Next">›</button>
-        </div>
-
-        <div class="cards-dots" id="cardsDots" aria-label="Projects carousel pagination"></div>
-      </div>
-    </section>
-
-    <!-- PUBLICATIONS -->
-    <section id="publications" class="reveal">
-      <div class="container">
-        <h2 class="section-title load-rise"><span></span> Publications</h2>
-        <div class="grid">
-          <div class="card" id="pub1">
-            <h3>Journal Articles</h3>
-            <ol class="pub-list">
-              <li>
-                Alizadeh, B., <strong>Bafti, A. G.</strong>, et al. (2021). Attention-based LSTM + BO for streamflow prediction.
-                <em>Journal of Hydrology</em>, 601, 126526.
-                <a href="https://doi.org/10.1016/J.JHYDROL.2021.126526" target="_blank" rel="noopener">DOI</a>
-              </li>
-              <li>
-                Doulabian, S., Tousi, E. G., Aghlmand, R., Alizadeh, B., <strong>Bafti, A. G.</strong> (2021).
-                Integrating SWAT with multi-criteria decision analysis for rainwater.
-                <em>Water</em>.
-              </li>
-              <li>
-                <strong>Bafti, A. G.</strong>, Ahmadi, A., Abbasi, A., Kamangir, H., Jamali, S., Hashemi, H. (2024).
-                Automated actual ET estimation: Attention U-Net + metaheuristics.
-                <em>Atmospheric Research</em>, 297, 107107.
-                <a href="https://doi.org/10.1016/j.atmosres.2023.107107" target="_blank" rel="noopener">DOI</a>
-              </li>
-              <li>
-                Ahmadi, A., Daccache, A., He, M., Namadi, P., <strong>Bafti, A. G.</strong>, et al. (2025).
-                Deep global learning for California reference ET.
-                <em>Journal of Hydrology: Regional Studies</em>, 59, 102339.
-                <a href="https://doi.org/10.1016/j.ejrh.2025.102339" target="_blank" rel="noopener">DOI</a>
-              </li>
-            </ol>
-          </div>
-          <div class="card" id="pub2">
-            <h3>Conferences</h3>
-            <ul class="pub-list">
-              <li>AGU 2023 — High-resolution profile soil moisture via data fusion + DL.</li>
-              <li>ASA/CSSA/SSSA 2023 — Microwave radiometry (C/L-band) for soil moisture (ML).</li>
-              <li>ASA/CSSA/SSSA 2023 — Root-zone soil moisture with L-band radiometer (hybrid modeling).</li>
-            </ul>
+            <!-- SKILLS -->
+      <section id="skills" class="reveal">
+        <div class="container">
+          <h2 class="section-title load-rise"><span></span> Skills</h2>
+          <div class="row">
+            <span class="chip">Python</span>
+            <span class="chip">ArcPy</span>
+            <span class="chip">TensorFlow</span>
+            <span class="chip">scikit-learn</span>
+            <span class="chip">LSTM / U-Net / Attention</span>
+            <span class="chip">SWMM</span>
+            <span class="chip">HEC-RAS</span>
+            <span class="chip">HEC-HMS</span>
+            <span class="chip">IN-CORE</span>
+            <span class="chip">BRAILS</span>
+            <span class="chip">GIS / Remote Sensing</span>
+            <span class="chip">PostGIS</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Airflow</span>
+            <span class="chip">AWS/GCP</span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="reveal">
-      <div class="container">
-        <h2 class="section-title load-rise"><span></span> Experience</h2>
-        <div class="card">
-          <div class="timeline">
-            <div class="timeline-item">
-              <strong>Graduate Student, Ocean Engineering</strong> — University of Rhode Island (Jan 2025–Sep 2026)
-              <div class="muted">Compound flooding & risk monitoring (IN-CORE · SWMM · BRAILS · ArcPy).</div>
-            </div>
-            <div class="timeline-item">
-              <strong>Research Assistant</strong> — University of Florida (Jan 2023–Aug 2024)
-              <div class="muted">ET/soil-moisture DL & RS; hydrologic/hydraulic modeling.</div>
-            </div>
-            <div class="timeline-item">
-              <strong>Visiting Researcher</strong> — Lund University (Oct 2021–Dec 2021)
-              <div class="muted">Hydrology & remote sensing collaboration (Erasmus+ ICM).</div>
+      <!-- CONTACT -->
+      <section id="contact" class="reveal">
+        <div class="container">
+          <h2 class="section-title load-rise"><span></span> Contact</h2>
+          <div class="grid cols-2">
+            <form class="card" action="mailto:a.ghaderibafti@ufl.edu" method="post" enctype="text/plain" onsubmit="notify(event)">
+              <h3>Send a message</h3>
+              <label>Name<br/>
+                <input required name="name" placeholder="Your name" class="field" />
+              </label>
+              <br/>
+              <label>Email<br/>
+                <input required type="email" name="email" placeholder="you@example.com" class="field" />
+              </label>
+              <br/>
+              <label>Message<br/>
+                <textarea required name="message" rows="5" placeholder="Hi! I'd like to talk about…" class="field"></textarea>
+              </label>
+              <br/>
+              <button class="btn" type="submit">Send</button>
+            </form>
+
+            <div class="card">
+              <h3>Elsewhere</h3>
+              <ul>
+                <li>GitHub: <a href="https://github.com/username" target="_blank" rel="noopener">@username</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/alirezabafti/" target="_blank" rel="noopener">/in/alirezabafti</a></li>
+                <li>Google Scholar: <a href="#" target="_blank" rel="noopener">Profile</a></li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- EDUCATION -->
-    <section id="education" class="reveal">
-      <div class="container">
-        <h2 class="section-title load-rise"><span></span> Education</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Ph.D. (in progress), Ocean Engineering — University of Rhode Island</h3>
-            <p class="muted">Jan 2025 – Sep 2026 (expected)</p>
-          </div>
-          <div class="card">
-            <h3>M.S., Soil & Water Sciences — University of Florida</h3>
-            <p class="muted">Jan 2023 – Aug 2024</p>
-          </div>
-          <div class="card">
-            <h3>M.S., Civil Engineering (Water) — Ferdowsi University of Mashhad</h3>
-            <p class="muted">2019 – 2022</p>
-          </div>
-          <div class="card">
-            <h3>B.S., Civil Engineering — Ferdowsi University of Mashhad</h3>
-            <p class="muted">2011 – 2015</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- CONTACT -->
-<section id="contact" class="reveal">
-  <div class="container">
-    <h2 class="section-title load-rise"><span></span> Contact</h2>
-    <div class="grid cols-2">
-      <form class="card" action="mailto:a.ghaderibafti@ufl.edu" method="post" enctype="text/plain" onsubmit="notify(event)">
-        <h3>Send a message</h3>
-        <label>Name<br/>
-          <input required name="name" placeholder="Your name" class="field" />
-        </label>
-        <br/>
-        <label>Email<br/>
-          <input required type="email" name="email" placeholder="you@example.com" class="field" />
-        </label>
-        <br/>
-        <label>Message<br/>
-          <textarea required name="message" rows="5" placeholder="Hi! I'd like to talk about…" class="field"></textarea>
-        </label>
-        <br/>
-        <button class="btn" type="submit">Send</button>
-      </form>
 
-      <div class="card">
-        <h3>Elsewhere</h3>
-        <ul>
-          <li>GitHub: <a href="https://github.com/username" target="_blank" rel="noopener">@username</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/username" target="_blank" rel="noopener">/in/username</a></li>
-          <li>Google Scholar: <a href="#" target="_blank" rel="noopener">Profile</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
-  </main>
+
 
   <footer class="site-footer">
     <div class="container">
@@ -500,7 +676,7 @@
   window.addEventListener('scroll', onScroll, {passive:true});
   hoverEdge.addEventListener('mouseenter', ()=> header.classList.remove('nav--hidden'));
 
-  /* Mega menus + blurred backdrop (Apple-style) */
+  /* ===== Mega menus + blurred backdrop (Apple-style) ===== */
   const backdrop = document.getElementById('navBackdrop');
   const headerEl = document.querySelector('.site-header');
   const navLinks = document.querySelector('.nav-links');
@@ -511,60 +687,81 @@
   const pageMain   = document.querySelector('main');
   const pageFooter = document.querySelector('.site-footer');
   function setInert(v){
-    if(!('inert' in HTMLElement.prototype)) return; // older browsers harmlessly skip
+    if(!('inert' in HTMLElement.prototype)) return;
     pageMain.inert = v; pageFooter.inert = v;
   }
 
-  function closeAll(){
-    megaItems.forEach(i => {
-      i.classList.remove('open');
-      i.querySelector('button.nav-link').setAttribute('aria-expanded','false');
-    });
-    backdrop.classList.remove('active');
-    document.documentElement.classList.remove('nav-open'); // removes filter fallback
-    setInert(false);
+  function closeItemWithAnimation(item){
+    if(!item || (!item.classList.contains('open') && !item.classList.contains('closing'))) return;
+    item.classList.remove('open');
+    item.classList.add('closing');
+    item.querySelector('button.nav-link')?.setAttribute('aria-expanded','false');
+
+    const panel = item.querySelector('.mega');
+    const onDone = (e)=>{
+      if(e.target !== panel) return;
+      panel.removeEventListener('transitionend', onDone);
+      item.classList.remove('closing');
+
+      // If none are open/closing, remove backdrop and inert
+      if(!document.querySelector('.nav-item.has-mega.open, .nav-item.has-mega.closing')){
+        backdrop.classList.remove('active');
+        document.documentElement.classList.remove('nav-open');
+        setInert(false);
+      }
+    };
+    panel.addEventListener('transitionend', onDone);
   }
+
+  function closeAll(){
+    document.querySelectorAll('.nav-item.has-mega.open').forEach(closeItemWithAnimation);
+  }
+
   function openItem(item){
-    megaItems.forEach(i => {
-      i.classList.remove('open');
-      i.querySelector('button.nav-link').setAttribute('aria-expanded','false');
+    // Close others first (they slide up)
+    document.querySelectorAll('.nav-item.has-mega.open').forEach(i=>{
+      if(i!==item) closeItemWithAnimation(i);
     });
+
+    item.classList.remove('closing');
     item.classList.add('open');
-    item.querySelector('button.nav-link').setAttribute('aria-expanded','true');
+    item.querySelector('button.nav-link')?.setAttribute('aria-expanded','true');
+
     backdrop.classList.add('active');
-    document.documentElement.classList.add('nav-open');   // enables blur fallback for all browsers
+    document.documentElement.classList.add('nav-open');
     setInert(true);
   }
 
-  // Open on hover/focus; switch instantly between the 2 mega menus
+  // Open on hover/focus; click toggles
   megaItems.forEach(item => {
     const btn = item.querySelector('button.nav-link');
     item.addEventListener('mouseenter', () => openItem(item));
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      item.classList.contains('open') ? closeAll() : openItem(item);
+      item.classList.contains('open') ? closeItemWithAnimation(item) : openItem(item);
     });
   });
 
-  // Close logic: leaving header AND the mega panel closes; hovering other nav links closes
+  // Close when leaving header and panel
   let overHeader=false, overMega=false;
   headerEl.addEventListener('mouseenter', ()=> overHeader=true);
   headerEl.addEventListener('mouseleave', ()=>{
-    overHeader=false; setTimeout(()=>{ if(!overHeader && !overMega) closeAll(); }, 40);
+    overHeader=false; setTimeout(()=>{ if(!overHeader && !overMega) closeAll(); }, 60);
   });
   megaPanels.forEach(p=>{
     p.addEventListener('mouseenter', ()=> overMega=true);
     p.addEventListener('mouseleave', ()=>{
-      overMega=false; setTimeout(()=>{ if(!overHeader && !overMega) closeAll(); }, 40);
+      overMega=false; setTimeout(()=>{ if(!overHeader && !overMega) closeAll(); }, 60);
     });
   });
 
+  // Hovering other plain links closes mega
   document.querySelectorAll('.nav-links > a').forEach(a=>{
     a.addEventListener('mouseenter', closeAll);
     a.addEventListener('focus', closeAll);
   });
 
-  // Focus handling
+  // Keyboard focus handling
   navLinks.addEventListener('focusin', (e)=>{
     const item = e.target.closest('.nav-item.has-mega');
     if(item) openItem(item);
@@ -574,6 +771,7 @@
     if(!intoMega) closeAll();
   });
 
+  // Backdrop click & Esc
   backdrop.addEventListener('click', closeAll);
   window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeAll(); });
 
@@ -690,48 +888,24 @@
         const li = document.createElement('li'); li.textContent = t; mBullets.appendChild(li);
       });
   }
-  function openModalFrom(card){
-    fillFrom(card);
-    lastFocus = document.activeElement;
-    document.body.classList.add('no-scroll');
-    modal.classList.remove('closing');
-    modal.classList.add('open');
-    requestAnimationFrame(()=> modal.classList.add('animate-in'));
-    mPanel.focus();
-  }
-  function closeModalQuick(){
-    modal.classList.remove('animate-in');
-    modal.classList.add('closing');
-    const done = (e)=>{
-      if(e.target!==mPanel) return;
-      modal.removeEventListener('transitionend', done);
-      modal.classList.remove('open','closing');
-      document.body.classList.remove('no-scroll');
-      if(lastFocus) lastFocus.focus();
-    };
-    modal.addEventListener('transitionend', done);
-    setTimeout(()=>{ if(modal.classList.contains('closing')){ modal.classList.remove('open','closing'); document.body.classList.remove('no-scroll'); } }, 500);
-  }
-  mBack.addEventListener('click', closeModalQuick);
-  mClose.addEventListener('click', closeModalQuick);
-  window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && modal.classList.contains('open')) closeModalQuick(); });
 
-  document.querySelectorAll('.promo-card').forEach(card=>{
-    card.addEventListener('click', (e)=>{
-      if(e.button !== 0) return;
-      if(shouldOpenFromClick(card, e)) openModalFrom(card);
-      e.preventDefault();
-    });
-    card.addEventListener('auxclick', (e)=>{ e.preventDefault(); });
-    card.setAttribute('tabindex','0');
-    card.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); openModalFrom(card); }});
-    const plus = card.querySelector('.card-plus');
-    plus?.addEventListener('click', (e)=>{ e.stopPropagation(); e.preventDefault(); openModalFrom(card); });
-  });
+  (function(){
+    const marquee = document.querySelector('.logos--minimal');
+    const toggle  = marquee?.querySelector('.logos-toggle');
+    if(!marquee || !toggle) return;
+
+    function setPaused(isPaused){
+      marquee.classList.toggle('is-paused', isPaused);
+      toggle.setAttribute('aria-pressed', String(isPaused));
+      toggle.setAttribute('aria-label', isPaused ? 'Resume auto-scrolling' : 'Pause auto-scrolling');
+      toggle.querySelector('.toggle-icon').textContent = isPaused ? '▶' : '❚❚';
+    }
+
+    let paused = false;
+    toggle.addEventListener('click', ()=>{ paused = !paused; setPaused(paused); });
+  })();
 </script>
-
 
 
 </body>
 </html>
-
