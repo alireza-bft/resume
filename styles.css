@@ -8,13 +8,14 @@
   --accent-2:#8b5cf6;
   --shadow:0 10px 25px rgba(2,6,23,.07), 0 2px 8px rgba(2,6,23,.05);
   --radius:16px;
-
+  --nav-blur-out: .3s;
   /* Nav / mega color (shared) */
   --nav-bg:#fff; /* solid (no transparency) */
 
   /* Publications layout vars */
   --pub-left: 25px;   /* manuscript text left start */
   --doi-space: 25px;  /* space on the right for DOI pill */
+
 }
 
 /* Header height (used by mega/backdrop) */
@@ -184,9 +185,12 @@ img{ max-width:100%; display:block }
 html.nav-open main, html.nav-open .site-footer{
   filter: blur(8px) saturate(120%);
 }
-main, .site-footer{ transition:none !important; } /* kill filter animation on exit */
-.site-header{ backdrop-filter:none; }
+.site-header{ backdrop-filter:0.12s ease; }
 
+main, .site-footer{
+  filter: none;
+  transition: filter var(--nav-blur-out) ease;
+}
 /* ====== Mobile Sheet ====== */
 #sheet{ position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:1200; display:none }
 #sheet:not(.hidden){ display:block }
@@ -392,13 +396,13 @@ section{ padding:56px 0 }
 .school-uf .edu-watermark{
   transform: translateY(-82px);
   width:min(38vw, 500px); height:min(24vw, 200px);
-  background-image:url("florida-gators-logo.png");
+  background-image:url("/florida-gators-logo.png");
   right:375px; opacity:.055; filter: grayscale(0%) saturate(135%) contrast(120%);
 }
 .school-uri{ --bar-1:#002147; --bar-2:#75B2DD }
 .school-uri .edu-watermark{
   transform: translateY(-140px);
-  background-image:url("uri_mascot.jpg");
+  background-image:url("/uri_mascot.jpg");
   width:min(38vw, 640px); height:min(24vw, 280px);
   right:360px; opacity:.08; filter: grayscale(0%) saturate(135%) contrast(120%);
 }
@@ -437,9 +441,9 @@ section{ padding:56px 0 }
   position: relative;
   padding: 14px var(--doi-space) 56px var(--pub-left);
   background: linear-gradient(
-    145deg,
-    color-mix(in srgb, var(--brand, #4b5563) 8%, #ffffff 92%) 0%,
-    color-mix(in srgb, var(--brand, #4b5563) 18%, #ffffff 82%) 100%
+    0deg,
+    color-mix(in srgb, var(--brand, #4b5563) 4%, #ffffff 96%) 0%,
+    color-mix(in srgb, var(--brand, #4b5563) 10%, #ffffff 90%) 100%
   );
   border: 1px solid rgba(2,6,23,.06);
   border-radius: 14px;
@@ -653,7 +657,8 @@ section{ padding:56px 0 }
   margin-left: 35px;   /* left margin */
   margin-right: 35px;  /* right margin */
   text-indent: 0em;    /* first line indentation */
-  line-height: 1.5;    /* (optional) improves readability */
+  line-height: 1.6;    /* (optional) improves readability */
+
 }
 .about-grid {
   display: grid;
@@ -797,7 +802,7 @@ section{ padding:56px 0 }
   width: auto;
   object-fit: contain;
   pointer-events: none;
-  opacity: .97;
+  opacity: .88;
 }
 /* Drop cap styling */
 .drop-cap::first-letter {
@@ -805,8 +810,55 @@ section{ padding:56px 0 }
   font-family: 'Great Vibes', cursive;
   font-size: 4em;
   line-height: 1;
-  margin-right: 0.15em;
-  color: #222;
+  margin-right: 0.18em;
+  color: #334155;
+  font-weight: 500;
 }
 
 
+
+.contact-waves{
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #fff;          /* white sky above waves */
+  margin: 0 0 -1px 0;        /* dock to section, no ribbon */
+}
+
+.waves-svg{
+  position: absolute; inset:0; width:100%; height:100%; display:block;
+}
+
+/* seamless tiling motion (two copies of the path) — faster */
+.wave{ transform: translateX(0); will-change: transform; }
+.layer-1{ animation: waveMove 8s linear infinite reverse; }
+.layer-2{ animation: waveMove 6s linear infinite reverse ; }
+.layer-3{ animation: waveMove 4s  linear infinite reverse; }
+
+@keyframes waveMove{
+  from{ transform: translateX(0); }
+  to  { transform: translateX(-1440px); } /* tile width */
+}
+
+/* reduce motion accessibility */
+@media (prefers-reduced-motion: reduce){
+  .layer-1, .layer-2, .layer-3{ animation: none; }
+}
+:root{
+  --contact-bg: #BFE5F3;   /* a touch lighter than before */
+  --wave1: #0C5476;        /* keep the back wave strong */
+  --wave2: #8FD0E8;        /* lighter middle blue */
+  --wave3: var(--contact-bg);        /* lightest front blue */
+}
+#contact{ background: var(--contact-bg); }
+
+/* (optional) soften the front wave a bit more */
+#contact linearGradient#wave3grad stop[offset="0%"] { stop-opacity: .97; }
+#contact linearGradient#wave3grad stop[offset="100%"] { stop-opacity: 1; }
+#contact linearGradient#wave2grad stop[offset="0%"] { stop-opacity: .99; }
+#contact linearGradient#wave2grad stop[offset="100%"] { stop-opacity: 1; }
+/* Override the generic section padding for the Contact section */
+#contact{
+  /* no space above the waves */
+  padding: 0 0 56px;   /* was 56px 0; keep bottom spacing */
+}
