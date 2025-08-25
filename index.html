@@ -397,138 +397,162 @@
         </div>
       </section>
 
-      <!-- PUBLICATIONS -->
-      <section id="publications" class="reveal pubs-section">
-        <div class="container">
-          <h2 class="section-title"><span></span> Publications</h2>
+     <section id="publications" class="reveal pubs-section">
+  <div class="container">
+    <h2 class="section-title"><span></span> Publications</h2>
 
-          <!-- Journal Articles -->
-          <div class="pub-panel">
-            <h3 class="pub-group-title">Journal Articles</h3>
-            <ul class="pub-list">
+    <!-- Tabs -->
+    <div class="pub-tabs" role="tablist" aria-label="Publications filter">
+      <button class="pub-tab is-active"
+              id="tab-journals"
+              role="tab"
+              aria-selected="true"
+              aria-controls="pane-journals">
+        Journal Articles
+      </button>
+      <button class="pub-tab"
+              id="tab-confs"
+              role="tab"
+              aria-selected="false"
+              aria-controls="pane-confs">
+        Conferences
+      </button>
+    </div>
 
-              <!-- JoH: Regional Studies -->
-              <li class="pub-item j-brand--jhrs" data-brand>
-                <span class="journal-chip journal-chip--left">
-                  <i class="journal-mark"></i>
-                  JoH: Regional Studies
-                  <div class="j-pop">
-                    <div class="j-pop-head">
-                      <span class="j-pop-logo"><img src="X22145818.jpg" alt="JoH: Regional Studies logo"></span>
-                      <div>
-                        <p class="j-pop-title">Journal of Hydrology: Regional Studies</p>
-                        <p class="j-pop-sub">Elsevier • Water Resources</p>
-                      </div>
-                    </div>
-                    <div class="j-pop-metrics">
-                      <span class="j-pop-badge">Impact Factor 5.0</span>
-                      <span class="j-pop-badge">CiteScore 7.4</span>
-                    </div>
-                  </div>
-                </span>
+    <!-- Panes -->
+    <div class="pub-panes">
 
-                Ahmadi, A., Daccache, A., He, M., Namadi, P., <strong>Bafti, A. G.</strong>, Sandhu, P., Bai, Z., Snyder, R. L., &amp; Kadir, T. <span class="pub-year">2025</span><br>
-                Enhancing the accuracy and generalizability of reference evapotranspiration forecasting in California using deep global learning.
-                <span class="pub-actions">
-                  <a class="btn-link" href="https://doi.org/10.1016/j.ejrh.2025.102339" target="_blank" rel="noopener">DOI</a>
-                </span>
-              </li>
+      <!-- JOURNALS -->
+      <div id="pane-journals" class="pub-pane is-active" role="tabpanel" aria-labelledby="tab-journals">
+        <div class="pub-panel">
+          <ul class="pub-list">
 
-              <!-- Atmospheric Research -->
-              <li class="pub-item j-brand--atres" data-brand>
-                <span class="journal-chip journal-chip--left">
-                  <i class="journal-mark"></i>
-                  Atmospheric Research
-                  <div class="j-pop">
-                    <div class="j-pop-head">
-                      <span class="j-pop-logo"><img src="X01698095.jpg" alt="Atmospheric Research logo"></span>
-                      <div>
-                        <p class="j-pop-title">Atmospheric Research</p>
-                        <p class="j-pop-sub">Elsevier • Atmospheric Sciences</p>
-                      </div>
-                    </div>
-                    <div class="j-pop-metrics">
-                      <span class="j-pop-badge">Impact Factor 4.4</span>
-                      <span class="j-pop-badge">CiteScore 9.2</span>
+            <!-- JoH: Regional Studies -->
+            <li class="pub-item j-brand--jhrs" data-brand>
+              <span class="journal-chip journal-chip--left">
+                <i class="journal-mark"></i>
+                JoH: Regional Studies
+                <div class="j-pop">
+                  <div class="j-pop-head">
+                    <span class="j-pop-logo"><img src="/X22145818.jpg" alt="JoH: Regional Studies logo"></span>
+                    <div>
+                      <p class="j-pop-title">Journal of Hydrology: Regional Studies</p>
+                      <p class="j-pop-sub">Elsevier • Water Resources</p>
                     </div>
                   </div>
-                </span>
+                  <div class="j-pop-metrics">
+                    <span class="j-pop-badge">Impact Factor 5.0</span>
+                    <span class="j-pop-badge">CiteScore 7.4</span>
+                  </div>
+                </div>
+              </span>
 
-                <strong>Bafti, A. G.</strong>, Ahmadi, A., Abbasi, A., Kamangir, H., Jamali, S., Hashemi, H. <span class="pub-year">2024</span><br>
-                Automated actual evapotranspiration estimation: Hybrid model of a novel attention based U-Net and metaheuristic algorithms.
-                <span class="pub-actions">
-                  <a class="btn-link" href="https://doi.org/10.1016/j.atmosres.2023.107107" target="_blank" rel="noopener">DOI</a>
-                </span>
-              </li>
+              Ahmadi, A., Daccache, A., He, M., Namadi, P., <strong>Bafti, A. G.</strong>, Sandhu, P., Bai, Z., Snyder, R. L., &amp; Kadir, T. <span class="pub-year">2025</span><br>
+              Enhancing the accuracy and generalizability of reference evapotranspiration forecasting in California using deep global learning.
+              <span class="pub-actions">
+                <a class="btn-link" href="https://doi.org/10.1016/j.ejrh.2025.102339" target="_blank" rel="noopener">DOI</a>
+              </span>
+            </li>
 
-              <!-- Journal of Hydrology -->
-              <li class="pub-item j-brand--joh" data-brand>
-                <span class="journal-chip journal-chip--left">
-                  <i class="journal-mark"></i>
-                  Journal of Hydrology
-                  <div class="j-pop">
-                    <div class="j-pop-head">
-                      <span class="j-pop-logo"><img src="X00221694.jpg" alt="Journal of Hydrology logo"></span>
-                      <div>
-                        <p class="j-pop-title">Journal of Hydrology</p>
-                        <p class="j-pop-sub">Elsevier • Hydrology</p>
-                      </div>
-                    </div>
-                    <div class="j-pop-metrics">
-                      <span class="j-pop-badge">Impact Factor 6.3</span>
-                      <span class="j-pop-badge">CiteScore 11.1</span>
+            <!-- Atmospheric Research -->
+            <li class="pub-item j-brand--atres" data-brand>
+              <span class="journal-chip journal-chip--left">
+                <i class="journal-mark"></i>
+                Atmospheric Research
+                <div class="j-pop">
+                  <div class="j-pop-head">
+                    <span class="j-pop-logo"><img src="/X01698095.jpg" alt="Atmospheric Research logo"></span>
+                    <div>
+                      <p class="j-pop-title">Atmospheric Research</p>
+                      <p class="j-pop-sub">Elsevier • Atmospheric Sciences</p>
                     </div>
                   </div>
-                </span>
+                  <div class="j-pop-metrics">
+                    <span class="j-pop-badge">Impact Factor 4.4</span>
+                    <span class="j-pop-badge">CiteScore 9.2</span>
+                  </div>
+                </div>
+              </span>
 
-                Alizadeh, B., <strong>Bafti, A. G.</strong>, Kamangir, H., Zhang, Y., Wright, D. B., &amp; Franz, K. J. <span class="pub-year">2021</span><br>
-                A novel attention-based LSTM cell post-processor coupled with bayesian optimization for streamflow prediction.
-                <span class="pub-actions">
-                  <a class="btn-link" href="https://doi.org/10.1016/j.jhydrol.2021.126526" target="_blank" rel="noopener">DOI</a>
-                </span>
-              </li>
+              <strong>Bafti, A. G.</strong>, Ahmadi, A., Abbasi, A., Kamangir, H., Jamali, S., Hashemi, H. <span class="pub-year">2024</span><br>
+              Automated actual evapotranspiration estimation: Hybrid model of a novel attention based U-Net and metaheuristic algorithms.
+              <span class="pub-actions">
+                <a class="btn-link" href="https://doi.org/10.1016/j.atmosres.2023.107107" target="_blank" rel="noopener">DOI</a>
+              </span>
+            </li>
 
-              <!-- Water (MDPI) -->
-              <li class="pub-item j-brand--water" data-brand>
-                <span class="journal-chip journal-chip--left">
-                  <i class="journal-mark"></i>
-                  Water (Switzerland)
-                  <div class="j-pop">
-                    <div class="j-pop-head">
-                      <span class="j-pop-logo"><img src="water-logo.png" alt="Water (MDPI) logo"></span>
-                      <div>
-                        <p class="j-pop-title">Water (Switzerland)</p>
-                        <p class="j-pop-sub">MDPI • Water Resources</p>
-                      </div>
-                    </div>
-                    <div class="j-pop-metrics">
-                      <span class="j-pop-badge">Impact Factor 3</span>
-                      <span class="j-pop-badge">CiteScore 6</span>
+            <!-- Journal of Hydrology -->
+            <li class="pub-item j-brand--joh" data-brand>
+              <span class="journal-chip journal-chip--left">
+                <i class="journal-mark"></i>
+                Journal of Hydrology
+                <div class="j-pop">
+                  <div class="j-pop-head">
+                    <span class="j-pop-logo"><img src="/X00221694.jpg" alt="Journal of Hydrology logo"></span>
+                    <div>
+                      <p class="j-pop-title">Journal of Hydrology</p>
+                      <p class="j-pop-sub">Elsevier • Hydrology</p>
                     </div>
                   </div>
-                </span>
+                  <div class="j-pop-metrics">
+                    <span class="j-pop-badge">Impact Factor 6.3</span>
+                    <span class="j-pop-badge">CiteScore 11.1</span>
+                  </div>
+                </div>
+              </span>
 
-                Doulabian, S., Tousi, E. G., Aghlmand, R., Alizadeh, B., <strong>Bafti, A. G.</strong>, Abbasi, A. <span class="pub-year">2021</span><br>
-                Evaluation of Integrating SWAT Model into a Multi-Criteria Decision Analysis towards Reliable Rainwater Harvesting Systems.
-                <span class="pub-actions">
-                  <a class="btn-link" href="https://doi.org/10.3390/w13141935" target="_blank" rel="noopener">DOI</a>
-                </span>
-              </li>
+              Alizadeh, B., <strong>Bafti, A. G.</strong>, Kamangir, H., Zhang, Y., Wright, D. B., &amp; Franz, K. J. <span class="pub-year">2021</span><br>
+              A novel attention-based LSTM cell post-processor coupled with bayesian optimization for streamflow prediction.
+              <span class="pub-actions">
+                <a class="btn-link" href="https://doi.org/10.1016/j.jhydrol.2021.126526" target="_blank" rel="noopener">DOI</a>
+              </span>
+            </li>
 
-            </ul>
-          </div>
+            <!-- Water -->
+            <li class="pub-item j-brand--water" data-brand>
+              <span class="journal-chip journal-chip--left">
+                <i class="journal-mark"></i>
+                Water (Switzerland)
+                <div class="j-pop">
+                  <div class="j-pop-head">
+                    <span class="j-pop-logo"><img src="/water-logo.png" alt="Water (MDPI) logo"></span>
+                    <div>
+                      <p class="j-pop-title">Water (Switzerland)</p>
+                      <p class="j-pop-sub">MDPI • Water Resources</p>
+                    </div>
+                  </div>
+                  <div class="j-pop-metrics">
+                    <span class="j-pop-badge">Impact Factor 3</span>
+                    <span class="j-pop-badge">CiteScore 6</span>
+                  </div>
+                </div>
+              </span>
 
-          <!-- Conferences -->
-          <div class="pub-panel">
-            <h3 class="pub-group-title">Conferences</h3>
-            <ul class="pub-list bullets">
-              <li class="pub-item slim">AGU 2023 — High-Resolution Profile Soil Moisture Predictions Using Data Fusion and Deep Learning</li>
-              <li class="pub-item slim">ASA/CSSA/SSSA 2023 — Evaluation of C- and L-Band Microwave Radiometer for SM Estimation with Machine Learning</li>
-              <li class="pub-item slim">ASA/CSSA/SSSA 2023 — Root Zone Soil Moisture Retrieval with an L-Band Radiometer: A Hybrid Modeling Approach</li>
-            </ul>
-          </div>
+              Doulabian, S., Tousi, E. G., Aghlmand, R., Alizadeh, B., <strong>Bafti, A. G.</strong>, Abbasi, A. <span class="pub-year">2021</span><br>
+              Evaluation of Integrating SWAT Model into a Multi-Criteria Decision Analysis towards Reliable Rainwater Harvesting Systems.
+              <span class="pub-actions">
+                <a class="btn-link" href="https://doi.org/10.3390/w13141935" target="_blank" rel="noopener">DOI</a>
+              </span>
+            </li>
+
+          </ul>
         </div>
-      </section>
+      </div>
+
+      <!-- CONFERENCES -->
+      <div id="pane-confs" class="pub-pane" role="tabpanel" aria-labelledby="tab-confs" hidden>
+        <div class="pub-panel">
+          <ul class="pub-list bullets">
+            <li class="pub-item slim">AGU 2023 — High-Resolution Profile Soil Moisture Predictions Using Data Fusion and Deep Learning</li>
+            <li class="pub-item slim">ASA/CSSA/SSSA 2023 — Evaluation of C- and L-Band Microwave Radiometer for SM Estimation with Machine Learning</li>
+            <li class="pub-item slim">ASA/CSSA/SSSA 2023 — Root Zone Soil Moisture Retrieval with an L-Band Radiometer: A Hybrid Modeling Approach</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       <!-- EXPERIENCE -->
       <section id="experience" class="reveal">
@@ -1020,23 +1044,117 @@ cards.forEach(card=>{
 mClose.addEventListener('click', closeModal);
 mBack.addEventListener('click', closeModal);
 window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
-      (function(){
-    const hero = document.querySelector('#contact .wave-hero');
-    const btn  = hero.querySelector('.waves-toggle');
-    const icon = btn.querySelector('.icon');
 
-    btn.addEventListener('click', () => {
-      const paused = hero.classList.toggle('is-paused');
-      btn.setAttribute('aria-pressed', paused ? 'true' : 'false');
-      btn.setAttribute('aria-label', paused ? 'Play animation' : 'Pause animation');
-      icon.textContent = paused ? '▶' : '❚❚';
+(function(){
+const hero = document.querySelector('#contact .wave-hero');
+if(!hero) return;                          // ← bail if section not present
+
+const btn  = hero.querySelector('.waves-toggle');
+const icon = btn?.querySelector('.icon');
+if(!btn || !icon) return;                  // ← bail if button/icon missing
+
+btn.addEventListener('click', () => {
+const paused = hero.classList.toggle('is-paused');
+btn.setAttribute('aria-pressed', paused ? 'true' : 'false');
+btn.setAttribute('aria-label', paused ? 'Play animation' : 'Pause animation');
+icon.textContent = paused ? '▶' : '❚❚';
+});
+})();
+    (function(){
+  const tabJ = document.getElementById('tab-journals');
+  const tabC = document.getElementById('tab-confs');
+  const paneJ = document.getElementById('pane-journals');
+  const paneC = document.getElementById('pane-confs');
+  if (!tabJ || !tabC || !paneJ || !paneC) return;
+
+  function activate(which){
+    const isJ = which === 'journals';
+    tabJ.classList.toggle('is-active', isJ);
+    tabC.classList.toggle('is-active', !isJ);
+    tabJ.setAttribute('aria-selected', String(isJ));
+    tabC.setAttribute('aria-selected', String(!isJ));
+
+    paneJ.hidden = !isJ;
+    paneC.hidden = isJ;
+    paneJ.classList.toggle('is-active', isJ);
+    paneC.classList.toggle('is-active', !isJ);
+  }
+
+  tabJ.addEventListener('click', () => activate('journals'));
+  tabC.addEventListener('click', () => activate('confs'));
+
+  // Optional: open from URL like …#publications?pubs=confs
+  const m = location.hash.match(/pubs=(journals|confs)/);
+  activate(m ? m[1] : 'journals');
+})();
+
+    (function(){
+  const tabs  = Array.from(document.querySelectorAll('.pub-tab'));
+  const panes = {
+    journals: document.getElementById('pane-journals'),
+    confs:    document.getElementById('pane-confs')
+  };
+  const wrapper = panes.journals?.parentElement; // .pub-panes
+
+  if(!tabs.length || !panes.journals || !panes.confs || !wrapper) return;
+
+  // set initial wrapper height to current active pane
+  function setWrapperHeight(immediate=false){
+    const active = wrapper.querySelector('.pub-pane.is-active');
+    if(!active) return;
+    const h = active.scrollHeight;
+    if(immediate){
+      wrapper.style.transition = 'none';
+      wrapper.style.height = h + 'px';
+      // force reflow then restore transition
+      requestAnimationFrame(()=>{ wrapper.offsetHeight; wrapper.style.transition='height .36s cubic-bezier(.2,.7,.2,1)'; });
+    } else {
+      wrapper.style.height = h + 'px';
+    }
+  }
+
+  function activate(which){
+    const tabOn  = which === 'journals' ? document.getElementById('tab-journals') : document.getElementById('tab-confs');
+    const tabOff = which === 'journals' ? document.getElementById('tab-confs')    : document.getElementById('tab-journals');
+
+    const paneOn  = panes[which];
+    const paneOff = which === 'journals' ? panes.confs : panes.journals;
+
+    // ARIA / visual state
+    tabOn.classList.add('is-active');
+    tabOn.setAttribute('aria-selected','true');
+
+    tabOff.classList.remove('is-active');
+    tabOff.setAttribute('aria-selected','false');
+
+    paneOff.classList.remove('is-active');
+    paneOff.setAttribute('hidden','');
+    paneOn.removeAttribute('hidden');
+    // wait one frame so the browser can apply position before fading in
+    requestAnimationFrame(()=>{
+      paneOn.classList.add('is-active');
+      setWrapperHeight(false);
     });
-  })();
+  }
+
+  // Click handlers
+  document.getElementById('tab-journals')?.addEventListener('click', ()=> activate('journals'));
+  document.getElementById('tab-confs')?.addEventListener('click',    ()=> activate('confs'));
+
+  // Initialize: ensure only one is active and wrapper height is set
+  // (your HTML already marks journals as active; we just lock the height)
+  setWrapperHeight(true);
+
+  // If fonts load later or window resizes, recalc height
+  window.addEventListener('resize', ()=> setWrapperHeight(false));
+})();
+
 </script>
 
 
 </body>
 </html>
+
 
 
 
