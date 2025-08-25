@@ -862,3 +862,73 @@ section{ padding:56px 0 }
   /* no space above the waves */
   padding: 0 0 56px;   /* was 56px 0; keep bottom spacing */
 }
+
+.pub-tabs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 0 0 18px;
+}
+
+.pub-tab {
+  appearance: none;
+  border: 1px solid rgba(2,6,23,.12);
+  background: #fff;
+  color: var(--text);
+  padding: 8px 16px;       /* bigger size */
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.03rem;       /* larger font */
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all .25s ease;
+}
+
+.pub-tab:hover {
+  background: rgba(2,6,23,.05);
+}
+
+.pub-tab.is-active {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+/* === Panes container === */
+.pub-panes {
+  position: relative;
+  transition: height .36s cubic-bezier(.2,.7,.2,1);
+  will-change: height;
+}
+
+/* Stack panes, fade/slide between them */
+.pub-pane {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity .3s ease, transform .35s cubic-bezier(.2,.7,.2,1);
+}
+
+.pub-pane.is-active {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.pub-pane[hidden] {
+  display: block !important; /* prevent flashing */
+}
+
+/* === Section spacing (match other sections) === */
+.pubs-section {
+  padding-bottom: 4px;   /* consistent bottom space */
+}
+
+#experience {
+  margin-top: 4px;       /* same gap as other sections */
+}
+
+
