@@ -27,7 +27,6 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
 
-        <!-- Projects mega menu -->
         <div class="nav-item has-mega" id="navProjects">
           <button class="nav-link" aria-expanded="false">Projects</button>
           <div class="mega" role="menu" aria-label="Projects">
@@ -36,10 +35,10 @@
                 <p class="mega-kicker">Explore</p>
                 <h3 class="mega-title">Selected Projects</h3>
                 <a href="#proj-fema" class="mega-link">Compound Flood Modeling — FEMA/NSF</a>
-                <a href="#proj-risk" class="mega-link">Flood-Risk Monitoring (IN-CORE · SWMM · BRAILS · ArcPy)</a>
-                <a href="#proj-twin" class="mega-link">Urban Flood Digital Twin</a>
+                <a href="#proj-risk" class="mega-link">Building Inventory (IN-CORE · DL · BRAILS · Image Analysis)</a>
+                <a href="#proj-twin" class="mega-link">Evapotranspiration Estimation</a>
                 <a href="#proj-et" class="mega-link">ET Estimation — Attention U-Net</a>
-                <a href="#proj-coastal" class="mega-link">Coastal Surge Mapper</a>
+                <a href="#proj-coastal" class="mega-link">Streamflow Prediction</a>
               </div>
               <div class="mega-col">
                 <p class="mega-kicker">Focus Areas</p>
@@ -60,7 +59,7 @@
             </div>
           </div>
         </div>
-
+        
         <!-- Publications mega menu -->
         <div class="nav-item has-mega" id="navPubs">
           <button class="nav-link" aria-expanded="false">Publications</button>
@@ -289,8 +288,7 @@
         </div>
       </section>
 
-      <!-- PROJECTS -->
-      <section id="projects" class="reveal">
+           <section id="projects" class="reveal">
         <div class="container">
           <h2 class="section-title load-rise"><span></span> Projects</h2>
 
@@ -307,7 +305,7 @@
                  data-img="assets/projects/compound_flood.jpg"
                  data-desc="Probabilistic compound flooding across coastal & urban catchments. Scenario generation, surge/tide + precipitation coupling, and street-level flow routing."
                  data-bullets="Scenario synthesis;Coupling surge/tide + rainfall;Uncertainty & exceedance maps">
-                <div class="promo-media"><img src="compound_flood.jpg" alt="Compound flooding visualization" /></div>
+                <div class="promo-media"><img src="assets/projects/compound_flood.jpg" alt="Compound flooding visualization" /></div>
                 <div class="promo-body">
                   <p class="promo-kicker">Compound</p>
                   <h3>Compound Flood Modeling</h3>
@@ -319,16 +317,16 @@
 
               <a class="promo-card"
                  id="proj-risk" href="#proj-risk"
-                 data-title="Flood-Risk Monitoring"
+                 data-title="Building Inventory"
                  data-sub="IN-CORE · SWMM · BRAILS · ArcPy"
                  data-tech="GeoAI · Automation · Building inventories"
                  data-img="assets/projects/risk_monitor.jpg"
                  data-desc="Continuous risk analytics pipeline using IN-CORE fragilities, building attributes from BRAILS, and hydrodynamic outputs to produce exposure time series."
                  data-bullets="Automated data pulls;IN-CORE fragilities;Operational dashboard">
-                <div class="promo-media"><img src="risk_monitor.jpg" alt="Risk monitoring dashboard" /></div>
+                <div class="promo-media"><img src="assets/projects/risk_monitor.jpg" alt="Risk monitoring dashboard" /></div>
                 <div class="promo-body">
                   <p class="promo-kicker">Risk</p>
-                  <h3>Flood-Risk Monitoring</h3>
+                  <h3>Building Inventory</h3>
                   <p class="promo-sub">IN-CORE · SWMM · BRAILS · ArcPy</p>
                   <p class="promo-foot">GeoAI · Automation · Building inventories</p>
                 </div>
@@ -337,18 +335,18 @@
 
               <a class="promo-card"
                  id="proj-twin" href="#proj-twin"
-                 data-title="Urban Flood Digital Twin"
+                 data-title="ESoil Moisture Estimation"
                  data-sub="Neighborhood forecasts with uncertainty"
                  data-tech="LSTM · FastAPI · Tiled maps"
                  data-img="assets/projects/digital_twin.jpg"
                  data-desc="Real-time twin that blends SWMM states with LSTM nowcasts; serves tiles/rasters via FastAPI for dashboards and emergency routing."
                  data-bullets="State fusion (SWMM + LSTM);FastAPI tile server;Uncertainty bands">
-                <div class="promo-media"><img src="digital_twin.jpg" alt="Urban flood digital twin" /></div>
+                <div class="promo-media"><img src="assets/projects/digital_twin.jpg" alt="Soil Moisture Estimation" /></div>
                 <div class="promo-body">
-                  <p class="promo-kicker">Twin</p>
-                  <h3>Urban Flood Digital Twin</h3>
-                  <p class="promo-sub">Neighborhood forecasts with uncertainty</p>
-                  <p class="promo-foot">LSTM · FastAPI · Tiled maps</p>
+                  <p class="promo-kicker">SM</p>
+                  <h3>Soil Moisture Estimation</h3>
+                  <p class="promo-sub">Root Zone SM Estimation</p>
+                  <p class="promo-foot">DL · Microwave RS · Brightness Temperature</p>
                 </div>
                 <button class="card-plus" type="button" aria-label="Open details">+</button>
               </a>
@@ -361,9 +359,9 @@
                  data-img="assets/projects/et_unet.jpg"
                  data-desc="Attention U-Net trained on flux towers & satellite inputs; evolutionary search for hyper-parameters; uncertainty via ensembling."
                  data-bullets="Attention U-Net;Flux tower targets;Ensembled uncertainty">
-                <div class="promo-media"><img src="et_unet.jpg" alt="ET estimation with Attention U-Net" /></div>
+                <div class="promo-media"><img src="assets/projects/et_unet.jpg" alt="ET estimation with Attention U-Net" /></div>
                 <div class="promo-body">
-                  <p class="promo-kicker">DL</p>
+                  <p class="promo-kicker">ET</p>
                   <h3>ET Estimation — Attention U-Net</h3>
                   <p class="promo-sub">Deep learning + metaheuristics</p>
                   <p class="promo-foot">TensorFlow · Remote sensing</p>
@@ -373,18 +371,18 @@
 
               <a class="promo-card"
                  id="proj-coastal" href="#proj-coastal"
-                 data-title="Coastal Surge Mapper"
+                 data-title="Streamflow Prediction"
                  data-sub="Terrain-aware routing & analysis"
-                 data-tech="HEC-RAS · SWMM · GDAL"
+                 data-tech="HEC-RAS · LSTM · Self Attention"
                  data-img="assets/projects/coastal_mapper.jpg"
                  data-desc="Surge/tide synthesizer with DEM conditioning and path-of-least-resistance routing to identify hot spots and critical infrastructure."
                  data-bullets="DEM conditioning;Routing by least resistance;Critical asset analysis">
-                <div class="promo-media"><img src="coastal_mapper.jpg" alt="Coastal surge mapping" /></div>
+                <div class="promo-media"><img src="assets/projects/coastal_mapper.jpg" alt="Coastal surge mapping" /></div>
                 <div class="promo-body">
-                  <p class="promo-kicker">Coastal</p>
-                  <h3>Coastal Surge Mapper</h3>
+                  <p class="promo-kicker">Streamflow</p>
+                  <h3>Recursive Streamflow Prediction</h3>
                   <p class="promo-sub">Terrain-aware routing & analysis</p>
-                  <p class="promo-foot">HEC-RAS · SWMM · GDAL</p>
+                  <p class="promo-foot">HEC-RAS · LSTM · Self Attention</p>
                 </div>
                 <button class="card-plus" type="button" aria-label="Open details">+</button>
               </a>
@@ -1154,6 +1152,7 @@ icon.textContent = paused ? '▶' : '❚❚';
 
 </body>
 </html>
+
 
 
 
